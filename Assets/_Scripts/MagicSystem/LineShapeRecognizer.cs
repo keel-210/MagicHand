@@ -2,36 +2,25 @@ using UnityEngine;
 using System.Linq;
 using System.Collections.Generic;
 using System.Collections;
-
+using UnityEngine.AddressableAssets;
 public class LineShapeRecognizer : MonoBehaviour
 {
-	public void Recognize()
+	[SerializeField] AssetReference MagicCircle;
+	public void Initialize(Transform IndexTip)
+	{
+		GetComponent<ShapeDetector.Detector>().onShapeDetected.AddListener(OnShapeDetected);
+		transform.parent = IndexTip;
+	}
+	public void DrawEnd()
 	{
 		LineRenderer l = GetComponent<LineRenderer>();
-		if (l == null)
-		{
-			Destroy(gameObject);
-			return;
-		}
-
-		Vector3[] points = new Vector3[l.positionCount];
-		l.GetPositions(points);
-		List<Vector3> PointsList = points.ToList();
-		CircleRecognize(PointsList);
 		StartCoroutine(DestroyLine(l, 0.5f));
 	}
-	void CircleRecognize(List<Vector3> points)
+	public void OnShapeDetected(ShapeDetector.ShapeInfo info)
 	{
-		Vector3 Ave = new Vector3(points.Select(x => x.x).Average(), points.Select(x => x.y).Average(), points.Select(x => x.z).Average());
-		IEnumerable<float> Radiuses = points.Select(x => (x - Ave).magnitude);
-		float AveRasius = Radiuses.Average();
-		float ErrorSum = Radiuses.Select(x => Mathf.Abs(x - AveRasius)).Sum();
-		if (ErrorSum / (points.Count * AveRasius) < 0.1f)
-		{
-			GameObject obj = new GameObject();
-			obj.transform.position = Ave;
-			obj.AddComponent<MagicCircle>();
-		}
+		Debug.Log(info.type + ": " + info.position);
+		if (info.type == ShapeDetector.ShapeType.Circle)
+			Addressables.LoadAssetAsync<GameObject>(MagicCircle).Completed += op => { op.Result.GetComponent<MagicCircle>()?.Initialize(info.position); };
 	}
 	IEnumerator DestroyLine(LineRenderer line, float waitTime)
 	{
@@ -44,5 +33,6 @@ public class LineShapeRecognizer : MonoBehaviour
 			line.endColor = e;
 			yield return null;
 		}
+		UnityEngine.AddressableAssets.Addressables.ReleaseInstance(this.gameObject);
 	}
 }

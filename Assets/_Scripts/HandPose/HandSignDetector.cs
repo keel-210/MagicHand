@@ -12,13 +12,18 @@ public class HandSignDetector : MonoBehaviour
 	HandBoneDot handBone;
 	public int HandSignNum;
 	public HandSign_Bend sign;
-	public float DrawEndWaitTime = 0.2f;
+	public float SignEndWaitTime = 0.2f;
 	bool IsPosing = false, PoseChangeWaiting = false;
 	void Start()
 	{
 		handBone = GetComponent<HandBoneDot>();
 		if (handBone == null)
 			return;
+		HandSignNum = 0;
+		for (int i = 0; i < handBone._fingerDots.Count; i++)
+			if (handBone._fingerDots[i].dot > ThumbBendThrethold)
+				HandSignNum += (int)Mathf.Pow(2, i);
+		UpdateSignInit();
 	}
 	void Update()
 	{
@@ -27,10 +32,10 @@ public class HandSignDetector : MonoBehaviour
 			if (handBone._fingerDots[i].dot > ThumbBendThrethold)
 				HandSignNum += (int)Mathf.Pow(2, i);
 
-		if (HandSignNum == (int)sign && !IsPosing)
+		if (!IsPosing)
 			UpdateSignInit();
-		else if (HandSignNum != (int)sign && !PoseChangeWaiting)
-			StartCoroutine(PoseEndWait(DrawEndWaitTime));
+		else if (HandSignNum != (int)sign && !PoseChangeWaiting && IsPosing)
+			StartCoroutine(PoseEndWait(SignEndWaitTime));
 	}
 	void UpdateSignInit()
 	{
@@ -41,7 +46,6 @@ public class HandSignDetector : MonoBehaviour
 	{
 		float t = Time.time;
 		PoseChangeWaiting = true;
-
 		while (Time.time < t + waitime)
 		{
 			if (HandSignNum == (int)sign)

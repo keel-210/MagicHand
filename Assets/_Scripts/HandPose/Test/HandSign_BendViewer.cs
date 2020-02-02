@@ -10,6 +10,6 @@ public class HandSign_BendViewer : MonoBehaviour
 	}
 	void Update()
 	{
-		text.text = System.Enum.GetName(typeof(HandSign_Bend), detector.HandSignNum);
+		text.text = System.Enum.GetName(typeof(HandSign_Bend), detector.sign);
 	}
 }
