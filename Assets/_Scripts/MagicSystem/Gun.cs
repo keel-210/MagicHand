@@ -27,7 +27,7 @@ public class Gun : MonoBehaviour
 		DirDot = Vector3.Dot(PrevIndexDirection, IndexDirection);
 		if (detector.sign == HandSign_Bend.Gun && DirDot < DirectoinThrethold && !IsShoting)
 		{
-			Addressables.LoadAssetAsync<GameObject>(BulletAsset).Completed += op =>
+			Addressables.InstantiateAsync(BulletAsset).Completed += op =>
 			{
 				op.Result.GetComponent<Bullet>()?.Initialize(IndexTip.position, IndexDirection);
 			};

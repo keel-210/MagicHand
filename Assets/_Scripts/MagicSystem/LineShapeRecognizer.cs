@@ -9,18 +9,22 @@ public class LineShapeRecognizer : MonoBehaviour
 	public void Initialize(Transform IndexTip)
 	{
 		GetComponent<ShapeDetector.Detector>().onShapeDetected.AddListener(OnShapeDetected);
+		GetComponent<ShapeDetector.Detector>().Initialize();
 		transform.parent = IndexTip;
+		transform.localPosition = Vector3.zero;
 	}
-	public void DrawEnd()
+	public void DrawEnd(Vector3[] positions)
 	{
+		GetComponent<ShapeDetector.Detector>().SetPositions(positions);
+		GetComponent<ShapeDetector.Detector>().DetectShape();
 		LineRenderer l = GetComponent<LineRenderer>();
 		StartCoroutine(DestroyLine(l, 0.5f));
 	}
 	public void OnShapeDetected(ShapeDetector.ShapeInfo info)
 	{
-		Debug.Log(info.type + ": " + info.position);
+		Debug.Log(info.type.ToString() + " : " + info.position.ToString("F3"));
 		if (info.type == ShapeDetector.ShapeType.Circle)
-			Addressables.LoadAssetAsync<GameObject>(MagicCircle).Completed += op => { op.Result.GetComponent<MagicCircle>()?.Initialize(info.position); };
+			Addressables.InstantiateAsync(MagicCircle).Completed += op => { op.Result.GetComponent<MagicCircle>()?.Initialize(info.position); };
 	}
 	IEnumerator DestroyLine(LineRenderer line, float waitTime)
 	{
@@ -28,11 +32,12 @@ public class LineShapeRecognizer : MonoBehaviour
 		while (Time.time < t + waitTime)
 		{
 			Color s = line.startColor, e = line.endColor;
-			s.a = e.a = (Time.time - t) / waitTime;
+			s.a = e.a = 1 - ((Time.time - t) / waitTime) > 0 ? 1 - ((Time.time - t) / waitTime) : 0;
 			line.startColor = s;
 			line.endColor = e;
 			yield return null;
 		}
+		line.startColor = line.endColor = new Color(0, 0, 0, 0);
 		UnityEngine.AddressableAssets.Addressables.ReleaseInstance(this.gameObject);
 	}
 }

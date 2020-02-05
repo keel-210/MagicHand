@@ -26,14 +26,14 @@ public class FingerLineDrawer : MonoBehaviour
 	}
 	void DrawInit()
 	{
-		Addressables.LoadAssetAsync<GameObject>(DrawObjectAsset).Completed += op =>
+		Addressables.InstantiateAsync(DrawObjectAsset).Completed += op =>
 		{
 			DrawObject = op.Result;
 			DrawObject.GetComponent<LineShapeRecognizer>().Initialize(_ovrSkelton.Bones[(int)OVRSkeleton.BoneId.Hand_IndexTip].Transform);
 			LineRenderer l = DrawObject.GetComponent<LineRenderer>();
 			IsDrawing = true;
 			l.positionCount = 1;
-			l.SetPosition(0, _ovrSkelton.Bones[(int)OVRSkeleton.BoneId.Hand_IndexTip].Transform.position);
+			l.SetPosition(0, DrawObject.transform.position);
 
 			StartCoroutine(DrawPointUpdate(l, DrawUpdateTime));
 		};
@@ -45,7 +45,7 @@ public class FingerLineDrawer : MonoBehaviour
 			if (!IsEndWait)
 			{
 				line.positionCount++;
-				line.SetPosition(line.positionCount - 1, _ovrSkelton.Bones[(int)OVRSkeleton.BoneId.Hand_IndexTip].Transform.position);
+				line.SetPosition(line.positionCount - 1, DrawObject.transform.position);
 			}
 			yield return new WaitForSeconds(waittime);
 		}
@@ -64,8 +64,10 @@ public class FingerLineDrawer : MonoBehaviour
 			}
 			yield return null;
 		}
-
-		DrawObject.GetComponent<LineShapeRecognizer>()?.DrawEnd();
+		Vector3[] Positions = new Vector3[DrawObject.GetComponent<LineRenderer>().positionCount];
+		Debug.Log("Line Pos Count" + DrawObject.GetComponent<LineRenderer>().positionCount.ToString());
+		DrawObject.GetComponent<LineRenderer>().GetPositions(Positions);
+		DrawObject.GetComponent<LineShapeRecognizer>()?.DrawEnd(Positions);
 		DrawObject = null;
 		IsDrawing = false;
 		IsEndWait = false;

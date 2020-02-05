@@ -44,7 +44,7 @@ namespace ShapeDetector
 	{
 		#region [Public Parameters]
 		[Tooltip("格納する最小点数（60 fps なら 180 で 3 sec 分保存）")]
-		public int positionCacheNum = 180;
+		public int positionCacheNum = 300;
 		[Tooltip("円の誤差の総和の許容値（大きいほど適当な図形でも反応する）")]
 		public float minCircleError = 0.07f;
 		[Tooltip("円と認識する最小半径")]
@@ -62,7 +62,7 @@ namespace ShapeDetector
 		[Tooltip("図形が終端したと判断する誤差")]
 		public float closeJudgeDistance = 0.2f;
 		[Tooltip("前回の距離との差が小さい時は円の判定を除外（軽量化のため）")]
-		public float adjacentDistanceThreshold = 0.05f;
+		public float adjacentDistanceThreshold = 0.01f;
 		#endregion
 
 
@@ -81,21 +81,35 @@ namespace ShapeDetector
 		private List<Vector3> vertexPoints_ = new List<Vector3>();
 		private int skipCountForSharpAngleDetection_ = 0;
 		#endregion
-
-
-		void Update()
+		public void Initialize()
 		{
-			AddPositionCache(transform.position);
-			if (DetectCircleGesture() || DetectPolygonGesture())
-			{
-				// Detected!        
-			}
+			positionCacheNum = 300;
+			minCircleError = 0.07f;
+			minCircleRadius = 0.01f;
+			sharpAngleJudgePointNum = 6;
+			minPolygonalSideLength = 0.05f;
+			closeJudgeDistance = 0.1f;
+			sharpAngleJudgeSideLength = 0.05f;
+			adjacentDistanceThreshold = 0.01f;
 		}
-
+		public void SetPositions(Vector3[] poss)
+		{
+			foreach (Vector3 v in poss)
+			{
+				AddPositionCache(v);
+			}
+			Debug.Log(positions_.Count.ToString());
+		}
+		public void DetectShape()
+		{
+			Debug.Log(DetectCircleGesture().ToString() + positions_.Count);
+			Debug.Log(DetectPolygonGesture().ToString() + positions_.Count);
+		}
 
 		void AddPositionCache(Vector3 position)
 		{
 			positions_.Insert(0, position);
+			// Debug.Log(positionCacheNum);
 			if (positions_.Count > positionCacheNum)
 			{
 				positions_.RemoveAt(positions_.Count - 1);
@@ -109,25 +123,39 @@ namespace ShapeDetector
 			vertexPoints_.Clear();
 		}
 
-
+		void DebugPositionView(int i)
+		{
+			GameObject obj = GameObject.CreatePrimitive(PrimitiveType.Cube);
+			obj.transform.position = positions_[i];
+			obj.transform.localScale = Vector3.one * 0.01f;
+			float DirDot = Vector3.Dot((positions_[i] - positions_[i == 0 ? 0 : i - 1]).normalized, (positions_[i + 1 == positions_.Count ? i : i + 1] - positions_[i]).normalized);
+			Debug.Log(DirDot);
+			if (DirDot > 0)
+				obj.GetComponent<Renderer>().material.color = new Color(DirDot, 0, 0, 1);
+			else
+				obj.GetComponent<Renderer>().material.color = new Color(0, 0, -DirDot, 1);
+			var ad = obj.AddComponent<AutoDestroy>();
+		}
 		// 円の検出
 		// 円はすべての点の平均点（= 中心）から各点の距離（= 半径）が一定という特性を使って検出
 		bool DetectCircleGesture()
 		{
 			var positionSum = Vector3.zero;
-
 			// NOTE: 軽量化のためにスキップしても良いかも
+
 			for (int i = 0; i < positions_.Count; ++i)
 			{
 				positionSum += positions_[i];
 
 				// 図形の終端検出
 				var distanceBetweenFirstAndLastPoint = Vector3.Distance(positions_[i], positions_[0]);
-				if (distanceBetweenFirstAndLastPoint > closeJudgeDistance) continue;
+				// if (distanceBetweenFirstAndLastPoint > closeJudgeDistance) continue;
 
 				// 近すぎる場合は処理負荷軽減のために除外
 				var distanceBetweenPreviousAndCurrentPoint = Vector3.Distance(positions_[i], positions_[i == 0 ? 0 : i - 1]);
 				if (distanceBetweenPreviousAndCurrentPoint < adjacentDistanceThreshold) continue;
+
+				DebugPositionView(i);
 
 				// 過去 i 点の位置の平均（円であれば円の中心点）
 				var meanPosition = positionSum / (i + 1);
@@ -221,7 +249,6 @@ namespace ShapeDetector
 			return false;
 		}
 
-
 		// 過去の点を見てある範囲の最大変化角度が閾値を超えて且つ最大になる場所を見つける
 		bool DetectSharpAnglePoint()
 		{
@@ -233,6 +260,9 @@ namespace ShapeDetector
 				// 適当な間隔を開けた２辺
 				var v0 = positions_[n - 1] - positions_[n * 2 - 1];
 				var v1 = positions_[n * 3 - 1] - positions_[n * 2];
+				Debug.Log("Detect Sharp: " + v0.magnitude.ToString() + ":" + sharpAngleJudgeSideLength.ToString() + ":" +
+					v1.magnitude.ToString() + ":" + sharpAngleJudgeSideLength.ToString() + ":" +
+					Mathf.Abs(Vector3.Angle(v0, v1)).ToString());
 
 				// それぞれの辺が閾値よりも長く、かつ直線でないと判断（なす角が最大角以下）したらそこを頂点とみなす
 				if (v0.magnitude > sharpAngleJudgeSideLength &&
@@ -253,6 +283,7 @@ namespace ShapeDetector
 							sharpestAnglePosition = (positions_[i + n] + positions_[i + n + 1]) / 2;
 						}
 					}
+					Debug.Log("Vertex");
 
 					if (AddVertex(sharpestAnglePosition))
 					{
@@ -316,6 +347,8 @@ namespace ShapeDetector
 				var ang2 = Vector3.Angle(p3 - p2, p3 - p1);
 				var ang3 = Vector3.Angle(p1 - p3, p1 - p2);
 				var length = (p2 - p1).magnitude;
+
+				Debug.Log("Tri:" + ang1.ToString() + " : " + ang2.ToString() + " : " + ang3.ToString());
 				if (Mathf.Abs(ang1 - 60) < minError &&
 					Mathf.Abs(ang2 - 60) < minError &&
 					Mathf.Abs(ang3 - 60) < minError &&
@@ -368,6 +401,9 @@ namespace ShapeDetector
 				var ang3 = Vector3.Angle(p4 - p3, p4 - p1);
 				var ang4 = Vector3.Angle(p1 - p4, p1 - p2);
 				var length = (p2 - p1).magnitude;
+
+				Debug.Log("Rec:" + ang1.ToString() + " : " + ang2.ToString() + " : " + ang3.ToString() + " : " + ang4.ToString());
+
 				if (Mathf.Abs(ang1 - 90) < minError &&
 					Mathf.Abs(ang2 - 90) < minError &&
 					Mathf.Abs(ang3 - 90) < minError &&

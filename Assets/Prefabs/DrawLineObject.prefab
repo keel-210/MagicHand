@@ -155,16 +155,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef690fc9ee7dd664eb80162d5b5960eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  positionCacheNum: 180
-  minCircleError: 0.07
-  minCircleRadius: 0.12
-  minPolygonalSideLength: 0.2
+  positionCacheNum: 300
+  minCircleError: 10
+  minCircleRadius: 0.01
+  minPolygonalSideLength: 0.05
   stopPointJudgePointNum: 4
   stopPointMaxVelocity: 0.006
   sharpAngleJudgePointNum: 6
-  sharpAngleJudgeSideLength: 0.05
-  closeJudgeDistance: 0.2
-  adjacentDistanceThreshold: 0.05
+  sharpAngleJudgeSideLength: 0.1
+  closeJudgeDistance: 0.1
+  adjacentDistanceThreshold: 0.01
   onShapeDetected:
     m_PersistentCalls:
       m_Calls: []

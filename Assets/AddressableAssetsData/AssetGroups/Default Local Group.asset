@@ -23,6 +23,34 @@ MonoBehaviour:
     m_SerializedLabels:
     - default
     m_mainAssetType: 
+  - m_GUID: 3334aa703386bed48bb605db31504f7a
+    m_Address: Assets/Prefabs/Dummy.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_GUID: 4331de9335a51384a9ab09184096cf4a
+    m_Address: Assets/Prefabs/MagicCircle.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_GUID: 7d3ae37fc467fb14591b083fde823f32
+    m_Address: Assets/Prefabs/Bullet.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_GUID: f2bb2545eaa675b449b194188e408a04
+    m_Address: Assets/Prefabs/DrawLineObject.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 2dd868a2451ae1c4d86dcf6fa0caeeae, type: 2}
   m_SchemaSet:
