@@ -15,10 +15,11 @@ public class LineShapeRecognizer : MonoBehaviour
 	}
 	public void DrawEnd(Vector3[] positions)
 	{
-		GetComponent<ShapeDetector.Detector>().SetPositions(positions);
-		GetComponent<ShapeDetector.Detector>().DetectShape();
 		LineRenderer l = GetComponent<LineRenderer>();
 		StartCoroutine(DestroyLine(l, 0.5f));
+		if (positions.Length < 20) return;
+		GetComponent<ShapeDetector.Detector>().SetPositions(positions);
+		GetComponent<ShapeDetector.Detector>().DetectShape();
 	}
 	public void OnShapeDetected(ShapeDetector.ShapeInfo info)
 	{

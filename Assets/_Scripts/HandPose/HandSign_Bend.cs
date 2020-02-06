@@ -19,7 +19,7 @@ public enum HandSign_Bend
 	Lover,
 	Phone,
 	DevilsHorn,
-	ThumbIndexPinky,
+	Spidey,
 	MiddlePinky,
 	ThumbMiddlePinky,
 	IndexMiddlePinky,

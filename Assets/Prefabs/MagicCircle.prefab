@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2430438531398183400}
   - component: {fileID: 2430438531398183403}
   - component: {fileID: 114841485963773358}
+  - component: {fileID: 114071000338133326}
   m_Layer: 0
   m_Name: MagicCircle
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2430438531398183397}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -58,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9222e8de20630914fb72009f2c216e54, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -90,3 +91,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d8e039ac40e9bf43a9efce4a99c697d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114071000338133326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2430438531398183397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0d1fe9d14c3d764d8edc9660e5073a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RotationSpeed: {x: 0, y: 0, z: 6}

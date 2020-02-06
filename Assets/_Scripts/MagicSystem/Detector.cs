@@ -129,7 +129,7 @@ namespace ShapeDetector
 			obj.transform.position = positions_[i];
 			obj.transform.localScale = Vector3.one * 0.01f;
 			float DirDot = Vector3.Dot((positions_[i] - positions_[i == 0 ? 0 : i - 1]).normalized, (positions_[i + 1 == positions_.Count ? i : i + 1] - positions_[i]).normalized);
-			Debug.Log(DirDot);
+			// Debug.Log(DirDot);
 			if (DirDot > 0)
 				obj.GetComponent<Renderer>().material.color = new Color(DirDot, 0, 0, 1);
 			else
@@ -142,14 +142,14 @@ namespace ShapeDetector
 		{
 			var positionSum = Vector3.zero;
 			// NOTE: 軽量化のためにスキップしても良いかも
-
+			if (positions_.Count < 20) return false;
 			for (int i = 0; i < positions_.Count; ++i)
 			{
 				positionSum += positions_[i];
 
 				// 図形の終端検出
 				var distanceBetweenFirstAndLastPoint = Vector3.Distance(positions_[i], positions_[0]);
-				// if (distanceBetweenFirstAndLastPoint > closeJudgeDistance) continue;
+				if (distanceBetweenFirstAndLastPoint > closeJudgeDistance) continue;
 
 				// 近すぎる場合は処理負荷軽減のために除外
 				var distanceBetweenPreviousAndCurrentPoint = Vector3.Distance(positions_[i], positions_[i == 0 ? 0 : i - 1]);
@@ -260,9 +260,9 @@ namespace ShapeDetector
 				// 適当な間隔を開けた２辺
 				var v0 = positions_[n - 1] - positions_[n * 2 - 1];
 				var v1 = positions_[n * 3 - 1] - positions_[n * 2];
-				Debug.Log("Detect Sharp: " + v0.magnitude.ToString() + ":" + sharpAngleJudgeSideLength.ToString() + ":" +
-					v1.magnitude.ToString() + ":" + sharpAngleJudgeSideLength.ToString() + ":" +
-					Mathf.Abs(Vector3.Angle(v0, v1)).ToString());
+				// Debug.Log("Detect Sharp: " + v0.magnitude.ToString() + ":" + sharpAngleJudgeSideLength.ToString() + ":" +
+				// 	v1.magnitude.ToString() + ":" + sharpAngleJudgeSideLength.ToString() + ":" +
+				// 	Mathf.Abs(Vector3.Angle(v0, v1)).ToString());
 
 				// それぞれの辺が閾値よりも長く、かつ直線でないと判断（なす角が最大角以下）したらそこを頂点とみなす
 				if (v0.magnitude > sharpAngleJudgeSideLength &&
