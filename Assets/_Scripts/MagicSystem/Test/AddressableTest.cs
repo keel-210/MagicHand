@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 public class AddressableTest : MonoBehaviour
 {
-	[SerializeField] AssetReference reference;
+	[SerializeField] AssetReference reference = default;
 	// Start is called before the first frame update
 	GameObject Object;
 	void Start()

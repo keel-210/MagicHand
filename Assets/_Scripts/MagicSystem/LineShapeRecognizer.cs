@@ -5,7 +5,7 @@ using System.Collections;
 using UnityEngine.AddressableAssets;
 public class LineShapeRecognizer : MonoBehaviour
 {
-	[SerializeField] AssetReference MagicCircle;
+	[SerializeField] AssetReference MagicCircle = default;
 	public void Initialize(Transform IndexTip)
 	{
 		GetComponent<ShapeDetector.Detector>().onShapeDetected.AddListener(OnShapeDetected);
@@ -25,7 +25,7 @@ public class LineShapeRecognizer : MonoBehaviour
 	{
 		Debug.Log(info.type.ToString() + " : " + info.position.ToString("F3"));
 		if (info.type == ShapeDetector.ShapeType.Circle)
-			Addressables.InstantiateAsync(MagicCircle).Completed += op => { op.Result.GetComponent<MagicCircle>()?.Initialize(info.position); };
+			Addressables.InstantiateAsync(MagicCircle).Completed += op => { op.Result.GetComponent<MagicCircle>()?.Initialize(info.position, info.rotation); };
 	}
 	IEnumerator DestroyLine(LineRenderer line, float waitTime)
 	{

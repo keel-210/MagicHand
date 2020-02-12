@@ -3,11 +3,11 @@ using System.Collections;
 
 public class HandSignDetector : MonoBehaviour
 {
-	[SerializeField, Range(-1, 1)] float ThumbBendThrethold;
-	[SerializeField, Range(-1, 1)] float IndexBendThrethold;
-	[SerializeField, Range(-1, 1)] float MiddleBendThrethold;
-	[SerializeField, Range(-1, 1)] float RingBendThrethold;
-	[SerializeField, Range(-1, 1)] float PinkyBendThrethold;
+	[SerializeField, Range(-1, 1)] float ThumbBendThrethold = 0.85f;
+	[SerializeField, Range(-1, 1)] float IndexBendThrethold = 0;
+	[SerializeField, Range(-1, 1)] float MiddleBendThrethold = 0;
+	[SerializeField, Range(-1, 1)] float RingBendThrethold = 0;
+	[SerializeField, Range(-1, 1)] float PinkyBendThrethold = 0;
 
 	HandBoneDot handBone;
 	public int HandSignNum;
@@ -16,6 +16,8 @@ public class HandSignDetector : MonoBehaviour
 	bool IsPosing = false, PoseChangeWaiting = false;
 	void Start()
 	{
+		ThumbBendThrethold = 0.85f;
+		IndexBendThrethold = MiddleBendThrethold = RingBendThrethold = PinkyBendThrethold = 0;
 		handBone = GetComponent<HandBoneDot>();
 		if (handBone == null)
 			return;

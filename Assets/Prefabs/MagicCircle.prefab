@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2430438531398183400}
   - component: {fileID: 2430438531398183403}
   - component: {fileID: 114841485963773358}
-  - component: {fileID: 114071000338133326}
+  - component: {fileID: 7934069144181838245}
   m_Layer: 0
   m_Name: MagicCircle
   m_TagString: Untagged
@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d8e039ac40e9bf43a9efce4a99c697d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114071000338133326
+--- !u!114 &7934069144181838245
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2430438531398183397}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0d1fe9d14c3d764d8edc9660e5073a2, type: 3}
+  m_Script: {fileID: 11500000, guid: fc68c64237d612e4faf0effc9b940b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   RotationSpeed: {x: 0, y: 0, z: 6}

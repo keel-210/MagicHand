@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class HandSign_BendViewer : MonoBehaviour
 {
-	[SerializeField] Text text;
+	[SerializeField] Text text = default;
 	HandSignDetector detector;
 	void Start()
 	{

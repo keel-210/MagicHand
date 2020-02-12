@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class GunDotViewer : MonoBehaviour
 {
-	[SerializeField] Slider slider;
+	[SerializeField] Slider slider = default;
 	Gun gun;
 	void Start()
 	{

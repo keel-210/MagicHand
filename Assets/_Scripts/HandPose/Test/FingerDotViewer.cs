@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 public class FingerDotViewer : MonoBehaviour
 {
-	[SerializeField] List<Slider> sliders;
+	[SerializeField] List<Slider> sliders = default;
 	HandBoneDot handBone;
 	bool _isInitialized;
 

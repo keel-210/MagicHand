@@ -24,6 +24,13 @@ MonoBehaviour:
     - default
     m_mainAssetType: UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  - m_GUID: d96c2ad2b494a404fb7ec392a69e58ed
+    m_Address: Assets/_Materials/NormalEnemy.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    m_mainAssetType: UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 2dd868a2451ae1c4d86dcf6fa0caeeae, type: 2}
   m_SchemaSet:

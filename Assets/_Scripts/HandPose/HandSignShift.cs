@@ -3,9 +3,9 @@ using System.Collections;
 using UnityEngine.Events;
 public class HandSignShift : MonoBehaviour
 {
-	[SerializeField] public HandSign_Bend FirstSign, SecondSign;
-	[SerializeField] HandSignDetector detector;
-	[SerializeField] float WaitTime;
+	[SerializeField] public HandSign_Bend FirstSign, SecondSign = default;
+	[SerializeField] HandSignDetector detector = default;
+	[SerializeField] float WaitTime = default;
 	public class ShiftDetectEvent : UnityEvent { }
 	public ShiftDetectEvent onShiftDetected = new ShiftDetectEvent();
 	HandSign_Bend PrevSign;
@@ -23,13 +23,11 @@ public class HandSignShift : MonoBehaviour
 	}
 	IEnumerator ShiftWaitCoroutine()
 	{
-		Debug.Log("Shifting...");
 		float t = Time.time;
 		while (Time.time < t + WaitTime)
 		{
 			if (detector.sign == SecondSign)
 			{
-				Debug.Log("Shift!");
 				onShiftDetected.Invoke();
 				IsShifting = false;
 				yield break;

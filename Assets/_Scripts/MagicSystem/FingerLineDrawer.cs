@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 public class FingerLineDrawer : MonoBehaviour
 {
-	[SerializeField] HandSignDetector detector;
-	[SerializeField, Range(0, 0.5f)] float DrawUpdateTime = 0.02f, DrawEndWaitTime = 0.2f, DrawWidth = 0.01f;
-	[SerializeField] AssetReference DrawObjectAsset;
+	[SerializeField] HandSignDetector detector = default;
+	[SerializeField, Range(0, 0.5f)] float DrawUpdateTime = 0.02f, DrawEndWaitTime = 0.2f;
+	[SerializeField] AssetReference DrawObjectAsset = default;
 	OVRSkeleton _ovrSkelton;
 	GameObject DrawObject;
 	bool IsDrawing = false, IsEndWait = false;
@@ -65,7 +65,7 @@ public class FingerLineDrawer : MonoBehaviour
 			yield return null;
 		}
 		Vector3[] Positions = new Vector3[DrawObject.GetComponent<LineRenderer>().positionCount];
-		Debug.Log("Line Pos Count" + DrawObject.GetComponent<LineRenderer>().positionCount.ToString());
+		// Debug.Log("Line Pos Count" + DrawObject.GetComponent<LineRenderer>().positionCount.ToString());
 		DrawObject.GetComponent<LineRenderer>().GetPositions(Positions);
 		DrawObject.GetComponent<LineShapeRecognizer>()?.DrawEnd(Positions);
 		DrawObject = null;

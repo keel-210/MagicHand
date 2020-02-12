@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 public class DrawObjectDummy : MonoBehaviour
 {
-	[SerializeField] AssetReference reference;
+	[SerializeField] AssetReference reference = default;
 	// Start is called before the first frame update
 	GameObject Object;
 	void Start()
@@ -19,7 +19,8 @@ public class DrawObjectDummy : MonoBehaviour
 	}
 	void Update()
 	{
-		Addressables.ReleaseInstance(Object);
+		if (Object != null)
+			Addressables.ReleaseInstance(Object);
 		this.enabled = false;
 	}
 }

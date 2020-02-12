@@ -98,7 +98,7 @@ namespace ShapeDetector
 			{
 				AddPositionCache(v);
 			}
-			Debug.Log(positions_.Count.ToString());
+			// Debug.Log(positions_.Count.ToString());
 		}
 		public void DetectShape()
 		{
