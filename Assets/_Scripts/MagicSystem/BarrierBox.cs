@@ -4,7 +4,7 @@ public class BarrierBox : MonoBehaviour
 {
 	[SerializeField, Range(0, 1f)] float LineXTime = default, LineYTime = default, LineZTime = default, FaceXTime = default, FaceYTime = default, FaceZTime = default;
 	Material material;
-	void OnEnable()
+	public void Initialize(float pitch)
 	{
 		material = GetComponent<Renderer>().material;
 		StartCoroutine(BarrierBoxInitEffect());

@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 public class TestAreaEnemy : MonoBehaviour
 {
-	[SerializeField] AssetReference normalEnemy = default;
+	[SerializeField] AssetReference normalEnemy = default, MultiEnemy = default;
 	void Start()
 	{
 		for (int i = -4; i < 5; i++)
@@ -15,5 +15,11 @@ public class TestAreaEnemy : MonoBehaviour
 				op.Result.name = op.Result.transform.position.ToString();
 			};
 		}
+		Addressables.InstantiateAsync(MultiEnemy).Completed += op =>
+		{
+			op.Result.transform.parent = transform;
+			op.Result.transform.localPosition = new Vector3(0, 5, 10);
+			op.Result.name = op.Result.transform.position.ToString();
+		};
 	}
 }

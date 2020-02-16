@@ -1,8 +1,10 @@
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using System.Collections;
 public class NormalEnemy : MonoBehaviour, IEnemy
 {
 	[SerializeField] AssetReference DestroyEffect_ref = default;
+	[SerializeField] AnimationCurve DestroyScaleCurve = default;
 	public int Health { get; set; }
 	void Start()
 	{
@@ -25,6 +27,16 @@ public class NormalEnemy : MonoBehaviour, IEnemy
 		{
 			op.Result.transform.position = pos;
 		};
+		StartCoroutine(DestroyScale(0.1f));
+	}
+	IEnumerator DestroyScale(float waitTime)
+	{
+		float t = Time.time;
+		while (Time.time < t + waitTime)
+		{
+			transform.localScale = Vector3.one * DestroyScaleCurve.Evaluate((Time.time - t) / waitTime);
+			yield return null;
+		}
 		Addressables.ReleaseInstance(this.gameObject);
 	}
 }

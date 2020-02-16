@@ -4,6 +4,11 @@ public class EnemyManagement : MonoBehaviour
 {
 	public List<GameObject> Enemys = new List<GameObject>();
 	public List<GameObject> MultiLockEnemy = new List<GameObject>();
+	Score score;
+	void Start()
+	{
+		score = FindObjectOfType<Score>();
+	}
 	public void SetEnemy(GameObject ene)
 	{
 		Enemys.Add(ene);
@@ -19,6 +24,6 @@ public class EnemyManagement : MonoBehaviour
 	}
 	public void RemoveMultiEnemy(GameObject ene)
 	{
-
+		MultiLockEnemy.Remove(ene);
 	}
 }

@@ -13,7 +13,6 @@ public class Gun : MonoBehaviour
 	Vector3 IndexDirection;
 	GameObject Circle;
 	LockOn lockOn;
-	List<Transform> ShotTargetList = new List<Transform>();
 	void Start()
 	{
 		Initialize();

@@ -22,16 +22,17 @@ public class Bullet : MonoBehaviour
 	}
 	void FixedUpdate()
 	{
-		if (IsInitialized && !IsHit)
+		if (!IsInitialized)
+			return;
+		if (!target || !transform)
 		{
-			if (!target)
-			{
-				UnityEngine.AddressableAssets.Addressables.ReleaseInstance(this.gameObject);
-				IsHit = true;
-			}
-			Vector3 a = 2f * (target.position - transform.position - rigidbody.velocity * HitTime) / (HitTime * HitTime);
-			rigidbody?.AddForce(a, ForceMode.Acceleration);
+			UnityEngine.AddressableAssets.Addressables.ReleaseInstance(this.gameObject);
+			IsHit = true;
 		}
+		if (IsHit)
+			return;
+		Vector3 a = 2f * (target.position - transform.position - rigidbody.velocity * HitTime) / (HitTime * HitTime);
+		rigidbody?.AddForce(a, ForceMode.Acceleration);
 	}
 	void OnCollisionEnter(Collision other)
 	{

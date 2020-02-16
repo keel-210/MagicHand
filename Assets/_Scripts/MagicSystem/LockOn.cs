@@ -2,12 +2,17 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
+using UnityEngine.Events;
+
 public class LockOn : MonoBehaviour
 {
 	[SerializeField] int LockOnLimit = default;
 	[SerializeField] EnemyManagement enemy = default;
 	[SerializeField] float LockOnDegreeThreshold = default, LockOnInterval = default;
 	public List<Transform> LockedEnemys = new List<Transform>();
+	public class LockOnEvent : UnityEvent { }
+	public LockOnEvent onLockOnEvent = new LockOnEvent();
+	public LockOnEvent onLockOnFailedEvent = new LockOnEvent();
 	AudioSource audio;
 	void Start()
 	{
@@ -24,8 +29,10 @@ public class LockOn : MonoBehaviour
 		if (enemy.MultiLockEnemy.Count == 0)
 			return;
 		var enemysInSight = enemy.MultiLockEnemy
-			.Where(x => Mathf.Sin(Mathf.PI * LockOnDegreeThreshold / 90) > Vector3.Dot(transform.forward, (x.transform.position - transform.position).normalized))
-					.OrderByDescending(x => Vector3.Dot(transform.forward, (x.transform.position - transform.position).normalized));
+		.Where(x => Mathf.Cos(Mathf.PI * LockOnDegreeThreshold / 90) < Vector3.Dot(transform.forward, (x.transform.position - transform.position).normalized))
+			.OrderByDescending(x => Mathf.Cos(Mathf.PI * LockOnDegreeThreshold / 90) < Vector3.Dot(transform.forward, (x.transform.position - transform.position).normalized));
+		if (enemysInSight.Count() == 0)
+			return;
 		if (LockedEnemys.Count < LockOnLimit && enemysInSight.First().GetComponent<IEnemy>().Health > 0)
 		{
 			LockedEnemys.Add(enemysInSight.First().transform);

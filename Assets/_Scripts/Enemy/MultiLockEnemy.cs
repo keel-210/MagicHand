@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using System.Collections;
 
 public class MultiLockEnemy : MonoBehaviour, IEnemy
 {
 	[SerializeField] AssetReference DestroyEffect_ref = default;
 	[SerializeField] int _health = 1;
+	[SerializeField] AnimationCurve DestroyScaleCurve = default;
 	public int Health { get; set; }
 	void Start()
 	{
@@ -22,10 +24,24 @@ public class MultiLockEnemy : MonoBehaviour, IEnemy
 	}
 	public void DestroyEffect()
 	{
+		if (Health > 0)
+			return;
+		KillSelf();
+		Vector3 pos = transform.position;
 		Addressables.InstantiateAsync(DestroyEffect_ref).Completed += op =>
 		{
-			op.Result.transform.position = transform.position;
+			op.Result.transform.position = pos;
 		};
-		Addressables.ReleaseInstance(gameObject);
+		StartCoroutine(DestroyScale(0.1f));
+	}
+	IEnumerator DestroyScale(float waitTime)
+	{
+		float t = Time.time;
+		while (Time.time < t + waitTime)
+		{
+			transform.localScale = Vector3.one * DestroyScaleCurve.Evaluate((Time.time - t) / waitTime);
+			yield return null;
+		}
+		Addressables.ReleaseInstance(this.gameObject);
 	}
 }
