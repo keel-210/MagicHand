@@ -7,7 +7,6 @@ public class BarrierSign : MonoBehaviour
 	[SerializeField] HandSignDetector detector = default;
 	[SerializeField] float ShotInterval = 0.1f;
 	[SerializeField] AssetReference BarrierBox = default;
-	OVRSkeleton _ovrSkelton;
 	LockOn lockOn;
 	void Start()
 	{
@@ -20,19 +19,9 @@ public class BarrierSign : MonoBehaviour
 			this.enabled = false;
 			return;
 		}
-		_ovrSkelton = detector.GetComponent<OVRSkeleton>();
 		lockOn = FindObjectOfType<LockOn>();
 
-
-		if (_ovrSkelton == null)
-			return;
-
 		StartCoroutine(ShotLoop());
-	}
-	void Update()
-	{
-		if (_ovrSkelton == null)
-			Initialize();
 	}
 	IEnumerator ShotLoop()
 	{
@@ -49,7 +38,7 @@ public class BarrierSign : MonoBehaviour
 					{
 						if (lockOn.LockedEnemys.Count > 0)
 						{
-							op.Result.GetComponent<BarrierBox>()?.Initialize(pitch);
+							op.Result.GetComponent<BarrierBox>()?.Initialize(lockOn.LockedEnemys[0], pitch);
 							lockOn.LockedEnemys.RemoveAt(0);
 						}
 					};
