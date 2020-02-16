@@ -525,7 +525,7 @@ namespace ShapeDetector
 		[System.Diagnostics.Conditional("DEBUG")]
 		void Log(string msg)
 		{
-			Debug.Log(msg);
+			// Debug.Log(msg);
 		}
 	}
 

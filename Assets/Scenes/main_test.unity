@@ -14,10 +14,10 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 0.46052867, g: 0.6984608, b: 0.745283, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 0.03
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -284,7 +284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb500615bb949c43941c6b21e97dd0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThumbBendThrethold: 0.85
+  ThumbBendThrethold: 0.6
   IndexBendThrethold: 0
   MiddleBendThrethold: 0
   RingBendThrethold: 0
@@ -677,7 +677,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1, y: 1}
+  m_SizeDelta: {x: 2, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &118612639
 MonoBehaviour:
@@ -1156,7 +1156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb500615bb949c43941c6b21e97dd0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThumbBendThrethold: 0.85
+  ThumbBendThrethold: 0.6
   IndexBendThrethold: 0
   MiddleBendThrethold: 0
   RingBendThrethold: 0
@@ -2899,7 +2899,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detector: {fileID: 57527511}
-  ShotInterval: 0.2
+  ShotInterval: 0.1
   BulletAsset:
     m_AssetGUID: 7d3ae37fc467fb14591b083fde823f32
     m_SubObjectName: 
@@ -2922,7 +2922,6 @@ MonoBehaviour:
   detector: {fileID: 57527511}
   DrawUpdateTime: 0.02
   DrawEndWaitTime: 0.2
-  DrawWidth: 0.01
   DrawObjectAsset:
     m_AssetGUID: f2bb2545eaa675b449b194188e408a04
     m_SubObjectName: 
@@ -3123,7 +3122,7 @@ MonoBehaviour:
   FirstSign: 0
   SecondSign: 31
   detector: {fileID: 285790834}
-  WaitTime: 0.2
+  WaitTime: 0.1
 --- !u!114 &1156225237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3139,7 +3138,6 @@ MonoBehaviour:
   detector: {fileID: 285790834}
   DrawUpdateTime: 0.02
   DrawEndWaitTime: 0.2
-  DrawWidth: 0.01
   DrawObjectAsset:
     m_AssetGUID: f2bb2545eaa675b449b194188e408a04
     m_SubObjectName: 
@@ -5116,6 +5114,7 @@ GameObject:
   - component: {fileID: 1935186748}
   - component: {fileID: 1935186751}
   - component: {fileID: 1935186752}
+  - component: {fileID: 1935186753}
   m_Layer: 0
   m_Name: CenterEyeAnchor
   m_TagString: MainCamera
@@ -5259,8 +5258,8 @@ MonoBehaviour:
       colorBlindnessType: 0
       colorBlindnessStrength: 1
   m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
-  m_ShowToolkit: 0
-  m_ShowCustomSorter: 0
+  m_ShowToolkit: 1
+  m_ShowCustomSorter: 1
   breakBeforeColorGrading: 0
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
@@ -5282,6 +5281,102 @@ MonoBehaviour:
   LockOnDegreeThreshold: 5
   LockOnInterval: 0.05
   LockedEnemys: []
+--- !u!82 &1935186753
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935186746}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 1f743726602e7d74dab688ad40ccefd8, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1942273721
 GameObject:
   m_ObjectHideFlags: 0
@@ -5317,7 +5412,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1.8, y: 1.8}
+  m_SizeDelta: {x: 3.6, y: 3.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1959432292
 PrefabInstance:
@@ -5865,8 +5960,8 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -820183389
+  m_SortingOrder: 100
   m_TargetDisplay: 0
 --- !u!224 &148690841537975917
 RectTransform:
@@ -5960,7 +6055,7 @@ GameObject:
   - component: {fileID: 148690842065323201}
   - component: {fileID: 148690842065323231}
   - component: {fileID: 148690842065323230}
-  - component: {fileID: 148690842065323228}
+  - component: {fileID: 148690842065323202}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -5985,9 +6080,9 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1000, y: 300}
+  m_SizeDelta: {x: 1000, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &148690842065323228
+--- !u!114 &148690842065323202
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6017,7 +6112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.9716981, g: 0.5761127, b: 0, a: 0.39215687}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []

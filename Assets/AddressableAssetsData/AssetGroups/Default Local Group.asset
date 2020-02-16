@@ -17,89 +17,12 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 92194786b60e88e41b57128e6ebfa5d6
   m_SerializeEntries:
-  - m_GUID: 0a38b79e969617345859baaab5e7585d
-    m_Address: Assets/Prefabs/Missile.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - default
-    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   - m_GUID: 18054250f548cbe4fb193d2f3097b800
     m_Address: Prefabs
     m_ReadOnly: 0
     m_SerializedLabels:
     - default
     m_mainAssetType: 
-  - m_GUID: 2291da57e926d6a4daa4132270173b3d
-    m_Address: Assets/Prefabs/HitEffect.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - default
-    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  - m_GUID: 3334aa703386bed48bb605db31504f7a
-    m_Address: Assets/Prefabs/Dummy.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - default
-    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  - m_GUID: 396e0445f843c0640938087419eaed0d
-    m_Address: Assets/Prefabs/Destroy_Multi.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - default
-    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  - m_GUID: 3bf2232938ace6e4297f8147f89f8460
-    m_Address: Assets/Prefabs/GunCircle.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - default
-    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  - m_GUID: 4331de9335a51384a9ab09184096cf4a
-    m_Address: Assets/Prefabs/MagicCircle.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - default
-    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  - m_GUID: 7d3ae37fc467fb14591b083fde823f32
-    m_Address: Assets/Prefabs/Bullet.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - default
-    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  - m_GUID: 8b8907aaefd61ad44aca35090da7a817
-    m_Address: Assets/Prefabs/NormalEnemy.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - default
-    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  - m_GUID: b0af7898aca1f4f48b0883246bcac8fc
-    m_Address: Assets/Prefabs/Destroy_Normal.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - default
-    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  - m_GUID: b80f59c22b8b3024aaa3f2ccdd2d15e2
-    m_Address: Assets/Prefabs/MultiEnemy.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - default
-    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  - m_GUID: f2bb2545eaa675b449b194188e408a04
-    m_Address: Assets/Prefabs/DrawLineObject.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - default
-    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 2dd868a2451ae1c4d86dcf6fa0caeeae, type: 2}
   m_SchemaSet:

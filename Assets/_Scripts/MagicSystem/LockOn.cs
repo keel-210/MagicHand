@@ -8,9 +8,11 @@ public class LockOn : MonoBehaviour
 	[SerializeField] EnemyManagement enemy = default;
 	[SerializeField] float LockOnDegreeThreshold = default, LockOnInterval = default;
 	public List<Transform> LockedEnemys = new List<Transform>();
+	AudioSource audio;
 	void Start()
 	{
 		StartCoroutine(Lock_Coroutine());
+		audio = GetComponent<AudioSource>();
 	}
 	void Lock()
 	{
@@ -28,6 +30,7 @@ public class LockOn : MonoBehaviour
 		{
 			LockedEnemys.Add(enemysInSight.First().transform);
 			enemysInSight.First().GetComponent<IEnemy>().Health--;
+			audio.Play();
 		}
 	}
 	void EnemyLock()
@@ -47,6 +50,7 @@ public class LockOn : MonoBehaviour
 			{
 				LockedEnemys.Add(LockTarget.transform);
 				LockTarget.GetComponent<IEnemy>().Health--;
+				audio.Play();
 				break;
 			}
 		}

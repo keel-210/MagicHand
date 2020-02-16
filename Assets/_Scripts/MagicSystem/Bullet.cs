@@ -4,31 +4,47 @@ using System.Linq;
 public class Bullet : MonoBehaviour
 {
 	[SerializeField] AssetReference HitEffect = default;
+	[SerializeField] float HitTime = 0.1f;
 	Rigidbody rigidbody;
-	Transform target;
-	public void Initialize(Vector3 StartPos, Vector3 IndexDirection, Transform _target)
+	public Transform target;
+	float pitch;
+	public bool IsInitialized = false, IsHit = false;
+	public void Initialize(Vector3 StartPos, Vector3 IndexDirection, Transform _target, float _pitch)
 	{
 		transform.position = StartPos;
 		rigidbody = gameObject.GetComponent<Rigidbody>();
 		rigidbody.useGravity = false;
 		rigidbody.velocity = IndexDirection * 10f;
 		target = _target;
+		pitch = _pitch;
+		IsInitialized = true;
+		IsHit = false;
 	}
 	void FixedUpdate()
 	{
-		if (!target)
-			UnityEngine.AddressableAssets.Addressables.ReleaseInstance(this.gameObject);
-
-		rigidbody.velocity = (target.position - transform.position).normalized * 10f;
+		if (IsInitialized && !IsHit)
+		{
+			if (!target)
+			{
+				UnityEngine.AddressableAssets.Addressables.ReleaseInstance(this.gameObject);
+				IsHit = true;
+			}
+			Vector3 a = 2f * (target.position - transform.position - rigidbody.velocity * HitTime) / (HitTime * HitTime);
+			rigidbody?.AddForce(a, ForceMode.Acceleration);
+		}
 	}
 	void OnCollisionEnter(Collision other)
 	{
+		if (other.transform != target)
+			return;
 		other.gameObject.GetComponent<IEnemy>()?.DestroyEffect();
-
+		IsHit = true;
 		Vector3 pos = transform.position;
 		Addressables.InstantiateAsync(HitEffect).Completed += op =>
 		{
 			op.Result.transform.position = pos;
+			op.Result.GetComponent<AudioSource>().pitch = pitch;
+			op.Result.GetComponent<AudioSource>().Play();
 		};
 		UnityEngine.AddressableAssets.Addressables.ReleaseInstance(this.gameObject);
 	}

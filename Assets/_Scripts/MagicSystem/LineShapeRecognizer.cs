@@ -23,7 +23,7 @@ public class LineShapeRecognizer : MonoBehaviour
 	}
 	public void OnShapeDetected(ShapeDetector.ShapeInfo info)
 	{
-		Debug.Log(info.type.ToString() + " : " + info.position.ToString("F3"));
+		// Debug.Log(info.type.ToString() + " : " + info.position.ToString("F3"));
 		if (info.type == ShapeDetector.ShapeType.Circle)
 			Addressables.InstantiateAsync(MagicCircle).Completed += op => { op.Result.GetComponent<MagicCircle>()?.Initialize(info.position, info.rotation); };
 	}

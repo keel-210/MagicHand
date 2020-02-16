@@ -50,7 +50,7 @@ public class Gun : MonoBehaviour
 		if (Circle != null)
 		{
 			Circle.transform.position = IndexTip.position;
-			Circle.transform.rotation = Quaternion.FromToRotation(Circle.transform.forward, (IndexTip.position - Index3.position).normalized);
+			Circle.transform.rotation = Quaternion.FromToRotation(Vector3.forward, (IndexTip.position - Index3.position).normalized);
 			Circle.SetActive(detector.sign == HandSign_Bend.Gun);
 		}
 	}
@@ -65,10 +65,14 @@ public class Gun : MonoBehaviour
 				for (int i = 0; i < BulletCount; i++)
 				{
 					IndexDirection = (IndexTip.position - Index3.position).normalized;
+					float pitch = 1f + 0.1f * i;
 					Addressables.InstantiateAsync(BulletAsset).Completed += op =>
 					{
-						op.Result.GetComponent<Bullet>()?.Initialize(IndexTip.position, IndexDirection, lockOn.LockedEnemys[0]);
-						lockOn.LockedEnemys.RemoveAt(0);
+						if (lockOn.LockedEnemys.Count > 0)
+						{
+							op.Result.GetComponent<Bullet>()?.Initialize(IndexTip.position, IndexDirection, lockOn.LockedEnemys[0], pitch);
+							lockOn.LockedEnemys.RemoveAt(0);
+						}
 					};
 					yield return new WaitForSeconds(ShotInterval);
 				}

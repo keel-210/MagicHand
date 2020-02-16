@@ -25,7 +25,6 @@ public class NormalEnemy : MonoBehaviour, IEnemy
 		{
 			op.Result.transform.position = pos;
 		};
-		Debug.Log("Destroy Called" + this.gameObject);
 		Addressables.ReleaseInstance(this.gameObject);
 	}
 }
