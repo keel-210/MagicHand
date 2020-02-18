@@ -6,8 +6,10 @@ public class NormalEnemy : MonoBehaviour, IEnemy
 	[SerializeField] AssetReference DestroyEffect_ref = default;
 	[SerializeField] AnimationCurve DestroyScaleCurve = default;
 	public int Health { get; set; }
-	void Start()
+	public void Initialize(Vector3 pos, Transform Manager)
 	{
+		transform.parent = Manager;
+		transform.localPosition = pos;
 		transform.root.GetComponent<EnemyManagement>().SetEnemy(gameObject);
 		Health = 1;
 	}

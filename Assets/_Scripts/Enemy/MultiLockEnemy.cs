@@ -8,8 +8,10 @@ public class MultiLockEnemy : MonoBehaviour, IEnemy
 	[SerializeField] int _health = 1;
 	[SerializeField] AnimationCurve DestroyScaleCurve = default;
 	public int Health { get; set; }
-	void Start()
+	public void Initialize(Vector3 pos, Transform Manager)
 	{
+		transform.parent = Manager;
+		transform.localPosition = pos;
 		transform.root.GetComponent<EnemyManagement>().SetMultiEnemy(gameObject);
 		Health = _health;
 	}

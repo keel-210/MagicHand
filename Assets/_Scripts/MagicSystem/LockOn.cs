@@ -10,7 +10,7 @@ public class LockOn : MonoBehaviour
 	[SerializeField] EnemyManagement enemy = default;
 	[SerializeField] float LockOnDegreeThreshold = default, LockOnInterval = default;
 	public List<Transform> LockedEnemys = new List<Transform>();
-	public class LockOnEvent : UnityEvent { }
+	public class LockOnEvent : UnityEvent<Vector3> { }
 	public LockOnEvent onLockOnEvent = new LockOnEvent();
 	public LockOnEvent onLockOnFailedEvent = new LockOnEvent();
 	AudioSource audio;
@@ -37,7 +37,12 @@ public class LockOn : MonoBehaviour
 		{
 			LockedEnemys.Add(enemysInSight.First().transform);
 			enemysInSight.First().GetComponent<IEnemy>().Health--;
+			onLockOnEvent.Invoke(enemysInSight.First().transform.position);
 			audio.Play();
+		}
+		else
+		{
+			onLockOnFailedEvent.Invoke(enemysInSight.First().transform.position);
 		}
 	}
 	void EnemyLock()
@@ -57,8 +62,13 @@ public class LockOn : MonoBehaviour
 			{
 				LockedEnemys.Add(LockTarget.transform);
 				LockTarget.GetComponent<IEnemy>().Health--;
+				onLockOnEvent.Invoke(LockTarget.transform.position);
 				audio.Play();
 				break;
+			}
+			else
+			{
+				onLockOnFailedEvent.Invoke(LockTarget.transform.position);
 			}
 		}
 	}

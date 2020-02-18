@@ -30,7 +30,7 @@ public class BarrierSign : MonoBehaviour
 			if (detector.sign == HandSign_Bend.Peace && lockOn.LockedEnemys.Count > 0)
 			{
 				int BulletCount = lockOn.LockedEnemys.Count;
-				Debug.Log("Shot [x" + BulletCount.ToString() + "]");
+				Debug.Log("Barrier [x" + BulletCount.ToString() + "]");
 				for (int i = 0; i < BulletCount; i++)
 				{
 					float pitch = 1f + 0.1f * i;

@@ -1,25 +1,31 @@
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using System.Collections;
 public class TestAreaEnemy : MonoBehaviour
 {
 	[SerializeField] AssetReference normalEnemy = default, MultiEnemy = default;
 	void Start()
 	{
-		for (int i = -4; i < 5; i++)
+		StartCoroutine(TestEnemy());
+	}
+	IEnumerator TestEnemy()
+	{
+		while (true)
 		{
-			Vector3 pos = new Vector3(i * 2, 0, 10);
-			Addressables.InstantiateAsync(normalEnemy).Completed += op =>
+
+			for (int i = -4; i < 5; i++)
 			{
-				op.Result.transform.parent = transform;
-				op.Result.transform.localPosition = pos;
-				op.Result.name = op.Result.transform.position.ToString();
+				Vector3 pos = new Vector3(i * 2, 0, 10);
+				Addressables.InstantiateAsync(normalEnemy).Completed += op =>
+				{
+					op.Result.GetComponent<IEnemy>().Initialize(pos, transform);
+				};
+			}
+			Addressables.InstantiateAsync(MultiEnemy).Completed += op =>
+			{
+				op.Result.GetComponent<IEnemy>().Initialize(new Vector3(0, 5, 10), transform);
 			};
+			yield return new WaitForSeconds(20f);
 		}
-		Addressables.InstantiateAsync(MultiEnemy).Completed += op =>
-		{
-			op.Result.transform.parent = transform;
-			op.Result.transform.localPosition = new Vector3(0, 5, 10);
-			op.Result.name = op.Result.transform.position.ToString();
-		};
 	}
 }

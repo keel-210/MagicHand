@@ -155,7 +155,7 @@ namespace ShapeDetector
 				var distanceBetweenPreviousAndCurrentPoint = Vector3.Distance(positions_[i], positions_[i == 0 ? 0 : i - 1]);
 				if (distanceBetweenPreviousAndCurrentPoint < adjacentDistanceThreshold) continue;
 
-				DebugPositionView(i);
+				// DebugPositionView(i);
 
 				// 過去 i 点の位置の平均（円であれば円の中心点）
 				var meanPosition = positionSum / (i + 1);

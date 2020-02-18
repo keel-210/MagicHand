@@ -4,6 +4,7 @@ using System.Linq;
 using System.Collections;
 public class MagicCircle : MonoBehaviour
 {
+	bool IsEnhanced;
 	public void Initialize(Vector3 pos, Quaternion rot)
 	{
 		transform.position = pos;
@@ -15,7 +16,16 @@ public class MagicCircle : MonoBehaviour
 	}
 	public void Release_Object(float WaitTime)
 	{
-		StartCoroutine(this.DelayMethod(WaitTime, () => { Addressables.ReleaseInstance(gameObject); }));
+		StartCoroutine(this.DelayMethod(WaitTime, () =>
+		{
+			if (!IsEnhanced)
+			{
+				var shifts = FindObjectsOfType<HandSignShift>().Where(x => x.FirstSign == HandSign_Bend.Fist && x.SecondSign == HandSign_Bend.OpenHand);
+				foreach (var s in shifts)
+					s.onShiftDetected.RemoveListener(Strong_Circle);
+				Addressables.ReleaseInstance(gameObject);
+			}
+		}));
 	}
 	void Strong_Circle()
 	{

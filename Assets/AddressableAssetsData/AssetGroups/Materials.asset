@@ -17,20 +17,12 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 200342586c7221a47ab26063cf511064
   m_SerializeEntries:
-  - m_GUID: 9222e8de20630914fb72009f2c216e54
-    m_Address: Assets/_Materials/MagicCircle.mat
+  - m_GUID: b9a7e8720fb315c498ff09706640e713
+    m_Address: Assets/_Materials
     m_ReadOnly: 0
     m_SerializedLabels:
     - default
-    m_mainAssetType: UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  - m_GUID: d96c2ad2b494a404fb7ec392a69e58ed
-    m_Address: Assets/_Materials/NormalEnemy.mat
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - default
-    m_mainAssetType: UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    m_mainAssetType: 
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 2dd868a2451ae1c4d86dcf6fa0caeeae, type: 2}
   m_SchemaSet:

@@ -71,7 +71,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _WireframeVal: 0.01
+    - _WireframeVal: 0.005
     - _XFace: 0.5
     - _XLine: 0.5
     - _XLineTest: 0.67

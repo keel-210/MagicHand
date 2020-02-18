@@ -7,6 +7,7 @@ public class Gun : MonoBehaviour
 	[SerializeField] HandSignDetector detector = default;
 	[SerializeField] float ShotInterval = 0.1f;
 	[SerializeField] AssetReference BulletAsset = default, GunCircle = default;
+	[SerializeField] AudioSource MaxShot;
 	public float DirDot;
 	OVRSkeleton _ovrSkelton;
 	Transform IndexTip, Index3;
@@ -73,6 +74,8 @@ public class Gun : MonoBehaviour
 							lockOn.LockedEnemys.RemoveAt(0);
 						}
 					};
+					if (i == 10)
+						MaxShot.Play();
 					yield return new WaitForSeconds(ShotInterval);
 				}
 			}
