@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MeshFace
+  m_Name: MeshFaceTorus
   m_Shader: {fileID: 4800000, guid: 5e38b3fb1ba97d94fa542d0e21b1b7e9, type: 3}
   m_ShaderKeywords: _ALPHABLEND_ON _EMISSION _STOCHASTIC_ALBEDO _STOCHASTIC_EMISSION
   m_LightmapFlags: 1
