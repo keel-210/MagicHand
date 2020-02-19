@@ -16,4 +16,8 @@ public class StandardEmission : MonoBehaviour
 	{
 		material.SetColor("_EmissionColor", emissionColor * 255 * curve.Evaluate(Mathf.Repeat(Time.time, AnimationLength) / AnimationLength));
 	}
+	void Disabled()
+	{
+		material.SetColor("_EmissionColor", emissionColor * 255);
+	}
 }
