@@ -37,6 +37,7 @@ public class LockOn : MonoBehaviour
 		{
 			LockedEnemys.Add(enemysInSight.First().transform);
 			enemysInSight.First().GetComponent<IEnemy>().Health--;
+			enemysInSight.First().GetComponent<IEnemy>().lockOn = this;
 			onLockOnEvent.Invoke(enemysInSight.First().transform.position);
 			audio.Play();
 		}
@@ -62,6 +63,7 @@ public class LockOn : MonoBehaviour
 			{
 				LockedEnemys.Add(LockTarget.transform);
 				LockTarget.GetComponent<IEnemy>().Health--;
+				LockTarget.GetComponent<IEnemy>().lockOn = this;
 				onLockOnEvent.Invoke(LockTarget.transform.position);
 				audio.Play();
 				break;

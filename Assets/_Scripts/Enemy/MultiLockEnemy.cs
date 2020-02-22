@@ -8,6 +8,7 @@ public class MultiLockEnemy : MonoBehaviour, IEnemy
 	[SerializeField] int _health = 1;
 	[SerializeField] AnimationCurve DestroyScaleCurve = default;
 	public int Health { get; set; }
+	public LockOn lockOn { get; set; }
 	public void Initialize(Vector3 pos, Transform Manager)
 	{
 		transform.parent = Manager;

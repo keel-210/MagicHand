@@ -6,6 +6,7 @@ public class NormalEnemy : MonoBehaviour, IEnemy
 	[SerializeField] AssetReference DestroyEffect_ref = default;
 	[SerializeField] AnimationCurve DestroyScaleCurve = default;
 	public int Health { get; set; }
+	public LockOn lockOn { get; set; }
 	public void Initialize(Vector3 pos, Transform Manager)
 	{
 		transform.parent = Manager;
@@ -16,6 +17,8 @@ public class NormalEnemy : MonoBehaviour, IEnemy
 	public void KillSelf()
 	{
 		transform.root.GetComponent<EnemyManagement>().RemoveEnemy(gameObject);
+		if (lockOn)
+			lockOn.LockedEnemys.Remove(transform);
 	}
 	void Update()
 	{

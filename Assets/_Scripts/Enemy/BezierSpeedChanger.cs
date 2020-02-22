@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class BezierSpeedChanger : MonoBehaviour
 {
-	[SerializeField] AnimationCurve curve;
+	[SerializeField] public AnimationCurve curve;
+	[SerializeField] public float curveRatio;
 	BezierSolution.BezierWalkerWithSpeed bezierWalker;
-	float t;
 	void Start()
 	{
-		t = Time.time;
+		bezierWalker = GetComponent<BezierSolution.BezierWalkerWithSpeed>();
 	}
 	void Update()
 	{
-		bezierWalker.speed = curve.Evaluate(Time.time - t);
+		bezierWalker.speed = curveRatio * curve.Evaluate(bezierWalker.NormalizedT);
 	}
 }

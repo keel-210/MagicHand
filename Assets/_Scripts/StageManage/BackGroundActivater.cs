@@ -20,7 +20,7 @@ public class BackGroundActivater : MonoBehaviour
 			BackgroundObj[nowActiveObjNum].SetActive(false);
 			BackgroundObj[nowActiveObjNum + 1].SetActive(true);
 			nowActiveObjNum++;
-			if (nowActiveObjNum == BackgroundObj.Count)
+			if (nowActiveObjNum == BackgroundObj.Count - 1)
 				this.enabled = false;
 		}
 	}
