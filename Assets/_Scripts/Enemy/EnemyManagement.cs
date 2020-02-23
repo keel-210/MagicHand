@@ -12,10 +12,12 @@ public class EnemyManagement : MonoBehaviour
 	public void SetEnemy(GameObject ene)
 	{
 		Enemys.Add(ene);
+		ene.GetComponent<IEnemy>().score = score;
 	}
 	public void SetMultiEnemy(GameObject ene)
 	{
 		MultiLockEnemy.Add(ene);
+		ene.GetComponent<IEnemy>().score = score;
 	}
 
 	public void RemoveEnemy(GameObject ene)

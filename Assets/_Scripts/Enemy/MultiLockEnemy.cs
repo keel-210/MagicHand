@@ -9,6 +9,7 @@ public class MultiLockEnemy : MonoBehaviour, IEnemy
 	[SerializeField] AnimationCurve DestroyScaleCurve = default;
 	public int Health { get; set; }
 	public LockOn lockOn { get; set; }
+	public Score score { get; set; }
 	public void Initialize(Vector3 pos, Transform Manager)
 	{
 		transform.parent = Manager;
@@ -30,6 +31,7 @@ public class MultiLockEnemy : MonoBehaviour, IEnemy
 		if (Health > 0)
 			return;
 		KillSelf();
+		score.score += 500 * _health;
 		Vector3 pos = transform.position;
 		Addressables.InstantiateAsync(DestroyEffect_ref).Completed += op =>
 		{

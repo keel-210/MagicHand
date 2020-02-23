@@ -7,6 +7,7 @@ public class NormalEnemy : MonoBehaviour, IEnemy
 	[SerializeField] AnimationCurve DestroyScaleCurve = default;
 	public int Health { get; set; }
 	public LockOn lockOn { get; set; }
+	public Score score { get; set; }
 	public void Initialize(Vector3 pos, Transform Manager)
 	{
 		transform.parent = Manager;
@@ -27,6 +28,7 @@ public class NormalEnemy : MonoBehaviour, IEnemy
 	}
 	public void DestroyEffect()
 	{
+		score.score += 500;
 		Vector3 pos = transform.position;
 		Addressables.InstantiateAsync(DestroyEffect_ref).Completed += op =>
 		{

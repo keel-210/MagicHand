@@ -6,4 +6,5 @@ public interface IEnemy
 	void KillSelf();
 	void DestroyEffect();
 	LockOn lockOn { get; set; }
+	Score score { get; set; }
 }

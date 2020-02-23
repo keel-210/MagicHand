@@ -13,11 +13,15 @@ public class AddressableTest : MonoBehaviour
 		Addressables.InstantiateAsync(reference).Completed += op =>
 		{
 			Object = op.Result;
+			Object.AddComponent<AddressableDisableTest>();
 		};
 	}
 	void Update()
 	{
-		Addressables.ReleaseInstance(Object);
-		this.enabled = false;
+		if (Object)
+		{
+			Addressables.ReleaseInstance(Object);
+			this.enabled = false;
+		}
 	}
 }

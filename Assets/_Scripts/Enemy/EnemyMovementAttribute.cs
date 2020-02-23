@@ -28,7 +28,7 @@ public class AreaEnemyDrawer : Editor
 			var element = ListProp.GetArrayElementAtIndex(index);
 			var foldoutRect = new Rect(rect)
 			{
-				height = rect.height,
+				height = EditorGUIUtility.singleLineHeight,
 				x = 45
 			};
 			element.isExpanded = EditorGUI.Foldout(foldoutRect, element.isExpanded, "Element" + index.ToString());

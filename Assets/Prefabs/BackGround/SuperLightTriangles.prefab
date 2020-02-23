@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5357007929927814108}
   - component: {fileID: 5357007929927814111}
+  - component: {fileID: 1910269018}
   m_Layer: 0
   m_Name: SuperLightTriangles
   m_TagString: Untagged
@@ -103,6 +104,19 @@ MonoBehaviour:
   AnimationLength: 0.5
   target: {fileID: 2414023746296995422}
   emissionColor: {r: 0, g: 0, b: 0.7490196, a: 1}
+--- !u!114 &1910269018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5357007929927814109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc68c64237d612e4faf0effc9b940b83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RotationSpeed: {x: 0, y: 0, z: 30}
 --- !u!1001 &5357007928287565799
 PrefabInstance:
   m_ObjectHideFlags: 0
