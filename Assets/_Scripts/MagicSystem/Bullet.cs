@@ -15,6 +15,7 @@ public class Bullet : MonoBehaviour
 		rigidbody = gameObject.GetComponent<Rigidbody>();
 		rigidbody.useGravity = false;
 		rigidbody.velocity = IndexDirection * 10f;
+		GetComponent<AudioSource>().Play();
 		target = _target;
 		pitch = _pitch;
 		IsInitialized = true;
@@ -31,14 +32,18 @@ public class Bullet : MonoBehaviour
 		}
 		if (IsHit)
 			return;
-		Vector3 a = 2f * (target.position - transform.position - rigidbody.velocity * HitTime) / (HitTime * HitTime);
+		Vector3 a = 2f * ((target.position - transform.position) - (rigidbody.velocity * HitTime)) / (HitTime * HitTime);
 		rigidbody?.AddForce(a, ForceMode.Acceleration);
+		if (HitTime > 0)
+			HitTime -= Time.deltaTime;
+		if (HitTime <= 0)
+			HitTime = 0.01f;
 	}
 	void OnCollisionEnter(Collision other)
 	{
 		if (other.transform != target)
 			return;
-		other.gameObject.GetComponent<IEnemy>()?.DestroyEffect();
+		other.gameObject.GetComponent<IEnemy>()?.DestroyWithScore();
 		IsHit = true;
 		Vector3 pos = transform.position;
 		Addressables.InstantiateAsync(HitEffect).Completed += op =>

@@ -1627,12 +1627,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 315aefc5f9adb804bb1e39d8c3c6884f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalEnemy:
-    m_AssetGUID: 8b8907aaefd61ad44aca35090da7a817
-    m_SubObjectName: 
-  multiEnemy:
-    m_AssetGUID: ef10c5bd5cc296040a4e6c85be0f29d6
-    m_SubObjectName: 
   EnemyList:
   - EnemyReference:
       m_AssetGUID: 8b8907aaefd61ad44aca35090da7a817
@@ -1993,7 +1987,7 @@ MonoBehaviour:
     BezierRot: {x: 10, y: 0, z: 45}
     health: 1
     SpeedRatio: 1
-    InitTime: 1
+    InitTime: 2
   - EnemyReference:
       m_AssetGUID: 8b8907aaefd61ad44aca35090da7a817
       m_SubObjectName: 
@@ -2065,7 +2059,7 @@ MonoBehaviour:
     BezierRot: {x: 10, y: 0, z: 135}
     health: 1
     SpeedRatio: 1
-    InitTime: 1
+    InitTime: 2
   - EnemyReference:
       m_AssetGUID: 8b8907aaefd61ad44aca35090da7a817
       m_SubObjectName: 
@@ -2137,7 +2131,7 @@ MonoBehaviour:
     BezierRot: {x: 10, y: 0, z: 225}
     health: 1
     SpeedRatio: 1
-    InitTime: 1
+    InitTime: 2
   - EnemyReference:
       m_AssetGUID: 8b8907aaefd61ad44aca35090da7a817
       m_SubObjectName: 
@@ -2209,7 +2203,7 @@ MonoBehaviour:
     BezierRot: {x: 10, y: 0, z: 315}
     health: 1
     SpeedRatio: 1
-    InitTime: 1
+    InitTime: 2
   - EnemyReference:
       m_AssetGUID: 8b8907aaefd61ad44aca35090da7a817
       m_SubObjectName: 
@@ -2281,7 +2275,7 @@ MonoBehaviour:
     BezierRot: {x: 0, y: 0, z: 45}
     health: 1
     SpeedRatio: 1
-    InitTime: 3
+    InitTime: 4
   - EnemyReference:
       m_AssetGUID: 8b8907aaefd61ad44aca35090da7a817
       m_SubObjectName: 
@@ -2353,7 +2347,7 @@ MonoBehaviour:
     BezierRot: {x: 0, y: 0, z: 135}
     health: 1
     SpeedRatio: 1
-    InitTime: 3
+    InitTime: 4
   - EnemyReference:
       m_AssetGUID: 8b8907aaefd61ad44aca35090da7a817
       m_SubObjectName: 
@@ -2425,7 +2419,7 @@ MonoBehaviour:
     BezierRot: {x: 0, y: 0, z: 225}
     health: 1
     SpeedRatio: 1
-    InitTime: 3
+    InitTime: 4
   - EnemyReference:
       m_AssetGUID: 8b8907aaefd61ad44aca35090da7a817
       m_SubObjectName: 
@@ -2497,7 +2491,7 @@ MonoBehaviour:
     BezierRot: {x: 0, y: 0, z: 315}
     health: 1
     SpeedRatio: 1
-    InitTime: 3
+    InitTime: 4
   - EnemyReference:
       m_AssetGUID: 8b8907aaefd61ad44aca35090da7a817
       m_SubObjectName: 
@@ -3143,7 +3137,7 @@ MonoBehaviour:
     EnemyPos: {x: 0, y: 0, z: 0}
     BezierPos: {x: 10, y: 3, z: -22}
     BezierRot: {x: 0, y: 0, z: 0}
-    health: 1
+    health: 10
     SpeedRatio: 20
     InitTime: 8
   - EnemyReference:
@@ -3215,9 +3209,3537 @@ MonoBehaviour:
     EnemyPos: {x: 0, y: 0, z: 0}
     BezierPos: {x: 0, y: 3, z: -22}
     BezierRot: {x: 0, y: 0, z: 0}
-    health: 1
+    health: 10
     SpeedRatio: 20
     InitTime: 8.4
+  - EnemyReference:
+      m_AssetGUID: 8b8907aaefd61ad44aca35090da7a817
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 8ef4774778718774ba8d39b4345b7de9
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.25
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.3
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.5
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.55
+        value: 1
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 2, y: 0, z: 2}
+    BezierRot: {x: 0, y: 0, z: 0}
+    health: 1
+    SpeedRatio: 20
+    InitTime: 12
+  - EnemyReference:
+      m_AssetGUID: 8b8907aaefd61ad44aca35090da7a817
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 8ef4774778718774ba8d39b4345b7de9
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.25
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.3
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.5
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.55
+        value: 1
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 4, y: 0, z: 2}
+    BezierRot: {x: 0, y: 0, z: 0}
+    health: 1
+    SpeedRatio: 20
+    InitTime: 12
+  - EnemyReference:
+      m_AssetGUID: 8b8907aaefd61ad44aca35090da7a817
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 8ef4774778718774ba8d39b4345b7de9
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.25
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.3
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.5
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.55
+        value: 1
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: -2, y: 0, z: 2}
+    BezierRot: {x: 0, y: 0, z: 0}
+    health: 1
+    SpeedRatio: 20
+    InitTime: 12
+  - EnemyReference:
+      m_AssetGUID: 8b8907aaefd61ad44aca35090da7a817
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 8ef4774778718774ba8d39b4345b7de9
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.25
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.3
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.5
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.55
+        value: 1
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: -4, y: 0, z: 2}
+    BezierRot: {x: 0, y: 0, z: 0}
+    health: 1
+    SpeedRatio: 20
+    InitTime: 12
+  - EnemyReference:
+      m_AssetGUID: 8b8907aaefd61ad44aca35090da7a817
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 8ef4774778718774ba8d39b4345b7de9
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.25
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.3
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.5
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.55
+        value: 1
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: -4, y: 0, z: 2}
+    BezierRot: {x: 0, y: 0, z: 0}
+    health: 1
+    SpeedRatio: 20
+    InitTime: 12
+  - EnemyReference:
+      m_AssetGUID: ef10c5bd5cc296040a4e6c85be0f29d6
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 0edb20e52b6296e4c9d606464f0e39d4
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.39
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 2
+        inSlope: -14.515441
+        outSlope: -14.515441
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.7
+        value: 2
+        inSlope: 16.732286
+        outSlope: 16.732286
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.71
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 0, y: 0, z: 0}
+    BezierRot: {x: 0, y: 0, z: 0}
+    health: 10
+    SpeedRatio: 1
+    InitTime: 20
+  - EnemyReference:
+      m_AssetGUID: ef10c5bd5cc296040a4e6c85be0f29d6
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 0edb20e52b6296e4c9d606464f0e39d4
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.39
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 2
+        inSlope: -14.515441
+        outSlope: -14.515441
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.7
+        value: 2
+        inSlope: 16.732286
+        outSlope: 16.732286
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.71
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 0, y: 0, z: 0}
+    BezierRot: {x: 0, y: 0, z: 180}
+    health: 10
+    SpeedRatio: 1
+    InitTime: 20
+  - EnemyReference:
+      m_AssetGUID: ef10c5bd5cc296040a4e6c85be0f29d6
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 0edb20e52b6296e4c9d606464f0e39d4
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.39
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 2
+        inSlope: -14.515441
+        outSlope: -14.515441
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.7
+        value: 2
+        inSlope: 16.732286
+        outSlope: 16.732286
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.71
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 0, y: 0, z: 0}
+    BezierRot: {x: 0, y: 0, z: 90}
+    health: 10
+    SpeedRatio: 1
+    InitTime: 24
+  - EnemyReference:
+      m_AssetGUID: ef10c5bd5cc296040a4e6c85be0f29d6
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 0edb20e52b6296e4c9d606464f0e39d4
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.39
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 2
+        inSlope: -14.515441
+        outSlope: -14.515441
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.7
+        value: 2
+        inSlope: 16.732286
+        outSlope: 16.732286
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.71
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 0, y: 0, z: 0}
+    BezierRot: {x: 0, y: 0, z: 270}
+    health: 10
+    SpeedRatio: 1
+    InitTime: 24
+  - EnemyReference:
+      m_AssetGUID: 8b8907aaefd61ad44aca35090da7a817
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 0edb20e52b6296e4c9d606464f0e39d4
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.39
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 2
+        inSlope: -14.515441
+        outSlope: -14.515441
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.7
+        value: 2
+        inSlope: 16.732286
+        outSlope: 16.732286
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.71
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 0, y: 0, z: 0}
+    BezierRot: {x: 0, y: 0, z: 0}
+    health: 1
+    SpeedRatio: 1
+    InitTime: 30
+  - EnemyReference:
+      m_AssetGUID: 8b8907aaefd61ad44aca35090da7a817
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 0edb20e52b6296e4c9d606464f0e39d4
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.39
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 2
+        inSlope: -14.515441
+        outSlope: -14.515441
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.7
+        value: 2
+        inSlope: 16.732286
+        outSlope: 16.732286
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.71
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 0, y: 0, z: 0}
+    BezierRot: {x: 0, y: 0, z: 120}
+    health: 1
+    SpeedRatio: 1
+    InitTime: 30
+  - EnemyReference:
+      m_AssetGUID: 8b8907aaefd61ad44aca35090da7a817
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 0edb20e52b6296e4c9d606464f0e39d4
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.39
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 2
+        inSlope: -14.515441
+        outSlope: -14.515441
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.7
+        value: 2
+        inSlope: 16.732286
+        outSlope: 16.732286
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.71
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 0, y: 0, z: 0}
+    BezierRot: {x: 0, y: 0, z: 240}
+    health: 1
+    SpeedRatio: 1
+    InitTime: 30
+  - EnemyReference:
+      m_AssetGUID: 8b8907aaefd61ad44aca35090da7a817
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 0edb20e52b6296e4c9d606464f0e39d4
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.39
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 2
+        inSlope: -14.515441
+        outSlope: -14.515441
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.7
+        value: 2
+        inSlope: 16.732286
+        outSlope: 16.732286
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.71
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 0, y: 0, z: 0}
+    BezierRot: {x: 0, y: 0, z: 0}
+    health: 1
+    SpeedRatio: 1
+    InitTime: 36
+  - EnemyReference:
+      m_AssetGUID: 8b8907aaefd61ad44aca35090da7a817
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 0edb20e52b6296e4c9d606464f0e39d4
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.39
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 2
+        inSlope: -14.515441
+        outSlope: -14.515441
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.7
+        value: 2
+        inSlope: 16.732286
+        outSlope: 16.732286
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.71
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 0, y: 0, z: 0}
+    BezierRot: {x: 0, y: 0, z: 60}
+    health: 1
+    SpeedRatio: 1
+    InitTime: 36
+  - EnemyReference:
+      m_AssetGUID: 8b8907aaefd61ad44aca35090da7a817
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 0edb20e52b6296e4c9d606464f0e39d4
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.39
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 2
+        inSlope: -14.515441
+        outSlope: -14.515441
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.7
+        value: 2
+        inSlope: 16.732286
+        outSlope: 16.732286
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.71
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 0, y: 0, z: 0}
+    BezierRot: {x: 0, y: 0, z: 120}
+    health: 1
+    SpeedRatio: 1
+    InitTime: 36
+  - EnemyReference:
+      m_AssetGUID: 8b8907aaefd61ad44aca35090da7a817
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 0edb20e52b6296e4c9d606464f0e39d4
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.39
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 2
+        inSlope: -14.515441
+        outSlope: -14.515441
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.7
+        value: 2
+        inSlope: 16.732286
+        outSlope: 16.732286
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.71
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 0, y: 0, z: 0}
+    BezierRot: {x: 0, y: 0, z: 180}
+    health: 1
+    SpeedRatio: 1
+    InitTime: 36
+  - EnemyReference:
+      m_AssetGUID: 8b8907aaefd61ad44aca35090da7a817
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 0edb20e52b6296e4c9d606464f0e39d4
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.39
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 2
+        inSlope: -14.515441
+        outSlope: -14.515441
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.7
+        value: 2
+        inSlope: 16.732286
+        outSlope: 16.732286
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.71
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 0, y: 0, z: 0}
+    BezierRot: {x: 0, y: 0, z: 240}
+    health: 1
+    SpeedRatio: 1
+    InitTime: 36
+  - EnemyReference:
+      m_AssetGUID: 8b8907aaefd61ad44aca35090da7a817
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 0edb20e52b6296e4c9d606464f0e39d4
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.39
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 2
+        inSlope: -14.515441
+        outSlope: -14.515441
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.7
+        value: 2
+        inSlope: 16.732286
+        outSlope: 16.732286
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.71
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 0, y: 0, z: 0}
+    BezierRot: {x: 0, y: 0, z: 300}
+    health: 1
+    SpeedRatio: 1
+    InitTime: 36
+  - EnemyReference:
+      m_AssetGUID: 8b8907aaefd61ad44aca35090da7a817
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 8ef4774778718774ba8d39b4345b7de9
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.35
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.55
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.6
+        value: 1
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 2, y: 0, z: 0}
+    BezierRot: {x: 0, y: 0, z: 0}
+    health: 1
+    SpeedRatio: 20
+    InitTime: 42
+  - EnemyReference:
+      m_AssetGUID: 8b8907aaefd61ad44aca35090da7a817
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 8ef4774778718774ba8d39b4345b7de9
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.35
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.55
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.6
+        value: 1
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 2, y: 0, z: 0}
+    BezierRot: {x: 0, y: 0, z: 180}
+    health: 1
+    SpeedRatio: 20
+    InitTime: 42
+  - EnemyReference:
+      m_AssetGUID: 8b8907aaefd61ad44aca35090da7a817
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 8ef4774778718774ba8d39b4345b7de9
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.35
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.55
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.6
+        value: 1
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: -2, y: 0, z: 0}
+    BezierRot: {x: 0, y: 0, z: 0}
+    health: 1
+    SpeedRatio: 20
+    InitTime: 42
+  - EnemyReference:
+      m_AssetGUID: 8b8907aaefd61ad44aca35090da7a817
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 8ef4774778718774ba8d39b4345b7de9
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.35
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.55
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.6
+        value: 1
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: -2, y: 0, z: 0}
+    BezierRot: {x: 0, y: 0, z: 180}
+    health: 1
+    SpeedRatio: 20
+    InitTime: 42
+  - EnemyReference:
+      m_AssetGUID: 8b8907aaefd61ad44aca35090da7a817
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 8ef4774778718774ba8d39b4345b7de9
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.35
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.55
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.6
+        value: 1
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 1, y: 0, z: 0}
+    BezierRot: {x: 0, y: 0, z: 0}
+    health: 1
+    SpeedRatio: 20
+    InitTime: 48
+  - EnemyReference:
+      m_AssetGUID: 8b8907aaefd61ad44aca35090da7a817
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 8ef4774778718774ba8d39b4345b7de9
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.35
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.55
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.6
+        value: 1
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: -1, y: 0, z: 0}
+    BezierRot: {x: 0, y: 0, z: 180}
+    health: 1
+    SpeedRatio: 20
+    InitTime: 48
+  - EnemyReference:
+      m_AssetGUID: 8b8907aaefd61ad44aca35090da7a817
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 8ef4774778718774ba8d39b4345b7de9
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.35
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.55
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.6
+        value: 1
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 1, y: 0, z: 0}
+    BezierRot: {x: 0, y: 0, z: 180}
+    health: 1
+    SpeedRatio: 20
+    InitTime: 50
+  - EnemyReference:
+      m_AssetGUID: 8b8907aaefd61ad44aca35090da7a817
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 8ef4774778718774ba8d39b4345b7de9
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.35
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.55
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.6
+        value: 1
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: -1, y: 0, z: 0}
+    BezierRot: {x: 0, y: 0, z: 0}
+    health: 1
+    SpeedRatio: 20
+    InitTime: 50
+  - EnemyReference:
+      m_AssetGUID: 9876a664f73278e4babfa0de4c3cc9e6
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: d9efc6047e2aed242b03c6393bc2e4ba
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.35
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.55
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.6
+        value: 1
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 1, y: 1, z: -22}
+    BezierRot: {x: -10, y: 0, z: 0}
+    health: 1
+    SpeedRatio: 20
+    InitTime: 50
+  - EnemyReference:
+      m_AssetGUID: 9876a664f73278e4babfa0de4c3cc9e6
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: d9efc6047e2aed242b03c6393bc2e4ba
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.35
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.55
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.6
+        value: 1
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: -1, y: 1, z: -22}
+    BezierRot: {x: 10, y: 0, z: 0}
+    health: 1
+    SpeedRatio: 20
+    InitTime: 50
+  - EnemyReference:
+      m_AssetGUID: ef10c5bd5cc296040a4e6c85be0f29d6
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 1e9b7b7815e12734889c8853e002eac4
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.35
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.55
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.6
+        value: 1
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 0, y: 0, z: 10}
+    BezierRot: {x: 0, y: 0, z: 0}
+    health: 10
+    SpeedRatio: 20
+    InitTime: 50
+  - EnemyReference:
+      m_AssetGUID: ef10c5bd5cc296040a4e6c85be0f29d6
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 1e9b7b7815e12734889c8853e002eac4
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.35
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.55
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.6
+        value: 1
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 0, y: 0, z: 10}
+    BezierRot: {x: 0, y: 0, z: 90}
+    health: 10
+    SpeedRatio: 20
+    InitTime: 50
+  - EnemyReference:
+      m_AssetGUID: ef10c5bd5cc296040a4e6c85be0f29d6
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 1e9b7b7815e12734889c8853e002eac4
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.35
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.55
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.6
+        value: 1
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 0, y: 0, z: 10}
+    BezierRot: {x: 0, y: 0, z: 180}
+    health: 10
+    SpeedRatio: 20
+    InitTime: 52
+  - EnemyReference:
+      m_AssetGUID: ef10c5bd5cc296040a4e6c85be0f29d6
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 1e9b7b7815e12734889c8853e002eac4
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.35
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.55
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.6
+        value: 1
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 0, y: 0, z: 10}
+    BezierRot: {x: 0, y: 0, z: 270}
+    health: 10
+    SpeedRatio: 20
+    InitTime: 52
+  - EnemyReference:
+      m_AssetGUID: 6ebd1218a6a229d44a1f0c1fd5761294
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 5ef17449822dc49419d9715dd24f704a
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 0, y: 0, z: 0}
+    BezierRot: {x: 0, y: 0, z: 0}
+    health: 1
+    SpeedRatio: -5
+    InitTime: 70
+  - EnemyReference:
+      m_AssetGUID: 6ebd1218a6a229d44a1f0c1fd5761294
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 5ef17449822dc49419d9715dd24f704a
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 0, y: 0, z: 0}
+    BezierRot: {x: 0, y: 0, z: 45}
+    health: 1
+    SpeedRatio: -5
+    InitTime: 75
+  - EnemyReference:
+      m_AssetGUID: 6ebd1218a6a229d44a1f0c1fd5761294
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 5ef17449822dc49419d9715dd24f704a
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 0, y: 0, z: 0}
+    BezierRot: {x: 0, y: 0, z: 37}
+    health: 1
+    SpeedRatio: -5
+    InitTime: 80
+  - EnemyReference:
+      m_AssetGUID: 6ebd1218a6a229d44a1f0c1fd5761294
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 5ef17449822dc49419d9715dd24f704a
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 0, y: 0, z: 0}
+    BezierRot: {x: 0, y: 0, z: 243}
+    health: 1
+    SpeedRatio: -5
+    InitTime: 85
+  - EnemyReference:
+      m_AssetGUID: 6ebd1218a6a229d44a1f0c1fd5761294
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 5ef17449822dc49419d9715dd24f704a
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 0, y: 0, z: 0}
+    BezierRot: {x: 0, y: 0, z: 156}
+    health: 1
+    SpeedRatio: -5
+    InitTime: 90
+  - EnemyReference:
+      m_AssetGUID: e48f000e285189e47ad4bcc3fe7330cc
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 8ef4774778718774ba8d39b4345b7de9
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.35
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.55
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.6
+        value: 1
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 2, y: 0, z: 2}
+    BezierRot: {x: 0, y: 0, z: 0}
+    health: 1
+    SpeedRatio: 20
+    InitTime: 92
+  - EnemyReference:
+      m_AssetGUID: e48f000e285189e47ad4bcc3fe7330cc
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 8ef4774778718774ba8d39b4345b7de9
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.35
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.55
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.6
+        value: 1
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: -2, y: 0, z: 2}
+    BezierRot: {x: 0, y: 0, z: 0}
+    health: 1
+    SpeedRatio: 20
+    InitTime: 92
+  - EnemyReference:
+      m_AssetGUID: e48f000e285189e47ad4bcc3fe7330cc
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 8ef4774778718774ba8d39b4345b7de9
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.35
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.55
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.6
+        value: 1
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 1, y: 0, z: 2}
+    BezierRot: {x: 0, y: 0, z: 0}
+    health: 1
+    SpeedRatio: 20
+    InitTime: 92
+  - EnemyReference:
+      m_AssetGUID: 9876a664f73278e4babfa0de4c3cc9e6
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 1e9b7b7815e12734889c8853e002eac4
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.35
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.55
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.6
+        value: 1
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 1, y: 0, z: -10}
+    BezierRot: {x: 0, y: 0, z: 0}
+    health: 1
+    SpeedRatio: 20
+    InitTime: 90
+  - EnemyReference:
+      m_AssetGUID: 9876a664f73278e4babfa0de4c3cc9e6
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 1e9b7b7815e12734889c8853e002eac4
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.35
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.55
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.6
+        value: 1
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 1, y: 0, z: -10}
+    BezierRot: {x: 0, y: 0, z: 180}
+    health: 1
+    SpeedRatio: 20
+    InitTime: 90
+  - EnemyReference:
+      m_AssetGUID: e48f000e285189e47ad4bcc3fe7330cc
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 1e9b7b7815e12734889c8853e002eac4
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.35
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.55
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.6
+        value: 1
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 1, y: 0, z: -10}
+    BezierRot: {x: 0, y: 0, z: 0}
+    health: 1
+    SpeedRatio: 20
+    InitTime: 96
+  - EnemyReference:
+      m_AssetGUID: e48f000e285189e47ad4bcc3fe7330cc
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 1e9b7b7815e12734889c8853e002eac4
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.35
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.55
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.6
+        value: 1
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 1, y: 0, z: -10}
+    BezierRot: {x: 0, y: 0, z: 90}
+    health: 1
+    SpeedRatio: 20
+    InitTime: 96
+  - EnemyReference:
+      m_AssetGUID: e48f000e285189e47ad4bcc3fe7330cc
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 1e9b7b7815e12734889c8853e002eac4
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.35
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.55
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.6
+        value: 1
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 1, y: 0, z: -10}
+    BezierRot: {x: 0, y: 0, z: 180}
+    health: 1
+    SpeedRatio: 20
+    InitTime: 96
+  - EnemyReference:
+      m_AssetGUID: e48f000e285189e47ad4bcc3fe7330cc
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 1e9b7b7815e12734889c8853e002eac4
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.35
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.55
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.6
+        value: 1
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 1, y: 0, z: -10}
+    BezierRot: {x: 0, y: 0, z: 270}
+    health: 1
+    SpeedRatio: 20
+    InitTime: 96
+  - EnemyReference:
+      m_AssetGUID: 9876a664f73278e4babfa0de4c3cc9e6
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 1e9b7b7815e12734889c8853e002eac4
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.35
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.55
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.6
+        value: 1
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 1, y: 0, z: -10}
+    BezierRot: {x: 0, y: 0, z: 0}
+    health: 1
+    SpeedRatio: 20
+    InitTime: 102
+  - EnemyReference:
+      m_AssetGUID: 9876a664f73278e4babfa0de4c3cc9e6
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 1e9b7b7815e12734889c8853e002eac4
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.35
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.55
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.6
+        value: 1
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 1, y: 0, z: -10}
+    BezierRot: {x: 0, y: 0, z: 120}
+    health: 1
+    SpeedRatio: 20
+    InitTime: 102
+  - EnemyReference:
+      m_AssetGUID: 9876a664f73278e4babfa0de4c3cc9e6
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 1e9b7b7815e12734889c8853e002eac4
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.35
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
+        outWeight: 0.31845918
+      - serializedVersion: 3
+        time: 0.55
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.20925066
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.6
+        value: 1
+        inSlope: -0
+        outSlope: -0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 1, y: 0, z: -10}
+    BezierRot: {x: 0, y: 0, z: 240}
+    health: 1
+    SpeedRatio: 20
+    InitTime: 102
+  - EnemyReference:
+      m_AssetGUID: 6ebd1218a6a229d44a1f0c1fd5761294
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 5ef17449822dc49419d9715dd24f704a
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 0, y: 0, z: -10}
+    BezierRot: {x: 0, y: 0, z: 0}
+    health: 1
+    SpeedRatio: -1
+    InitTime: 112
+  - EnemyReference:
+      m_AssetGUID: 6ebd1218a6a229d44a1f0c1fd5761294
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 5ef17449822dc49419d9715dd24f704a
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 0, y: 0, z: -10}
+    BezierRot: {x: 0, y: 0, z: 0}
+    health: 1
+    SpeedRatio: -1
+    InitTime: 116
+  - EnemyReference:
+      m_AssetGUID: 6ebd1218a6a229d44a1f0c1fd5761294
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 5ef17449822dc49419d9715dd24f704a
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 0, y: 0, z: -10}
+    BezierRot: {x: 0, y: 0, z: 0}
+    health: 1
+    SpeedRatio: -1
+    InitTime: 120
+  - EnemyReference:
+      m_AssetGUID: 6ebd1218a6a229d44a1f0c1fd5761294
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 5ef17449822dc49419d9715dd24f704a
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 0, y: 0, z: -10}
+    BezierRot: {x: 0, y: 0, z: 0}
+    health: 1
+    SpeedRatio: -1
+    InitTime: 124
+  - EnemyReference:
+      m_AssetGUID: 6ebd1218a6a229d44a1f0c1fd5761294
+      m_SubObjectName: 
+    EnemyBezier:
+      m_AssetGUID: 5ef17449822dc49419d9715dd24f704a
+      m_SubObjectName: 
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    EnemyPos: {x: 0, y: 0, z: 0}
+    BezierPos: {x: 0, y: 0, z: -10}
+    BezierRot: {x: 0, y: 0, z: 0}
+    health: 1
+    SpeedRatio: -1
+    InitTime: 128
   DeleteEnemyList: []
 --- !u!4 &433955340
 Transform:

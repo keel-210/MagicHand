@@ -18,12 +18,12 @@ public class TestAreaEnemy : MonoBehaviour
 				Vector3 pos = new Vector3(i * 2, 0, 10);
 				Addressables.InstantiateAsync(normalEnemy).Completed += op =>
 				{
-					op.Result.GetComponent<IEnemy>().Initialize(pos, transform);
+					// op.Result.GetComponent<IEnemy>().Initialize(pos, transform);
 				};
 			}
 			Addressables.InstantiateAsync(MultiEnemy).Completed += op =>
 			{
-				op.Result.GetComponent<IEnemy>().Initialize(new Vector3(0, 5, 10), transform);
+				// op.Result.GetComponent<IEnemy>().Initialize(new Vector3(0, 5, 10), transform);
 			};
 			yield return new WaitForSeconds(20f);
 		}

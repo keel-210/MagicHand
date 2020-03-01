@@ -9,11 +9,18 @@ public class BezierCompleteDestroy : MonoBehaviour
 	}
 	void Update()
 	{
-		if (bezierWalker.NormalizedT == 1)
+		if (bezierWalker.NormalizedT == 1 && bezierWalker.spline)
 		{
-			UnityEngine.AddressableAssets.Addressables.ReleaseInstance(bezierWalker.spline.gameObject);
 			gameObject.GetComponent<IEnemy>().KillSelf();
-			UnityEngine.AddressableAssets.Addressables.ReleaseInstance(this.gameObject);
+			gameObject.GetComponent<IEnemy>().DestroyWithoutScore();
+			if (bezierWalker.spline)
+				UnityEngine.AddressableAssets.Addressables.ReleaseInstance(bezierWalker.spline.gameObject);
+			Destroy(bezierWalker);
 		}
+	}
+	void OnDisable()
+	{
+		if (bezierWalker && bezierWalker.spline)
+			UnityEngine.AddressableAssets.Addressables.ReleaseInstance(bezierWalker.spline.gameObject);
 	}
 }

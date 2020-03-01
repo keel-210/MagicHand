@@ -163,7 +163,7 @@ Material:
     - _DetailNormalColorSpaceVector2: {r: 0, g: 0, b: 0, a: 0}
     - _DetailNormalColorSpaceVector3: {r: 0, g: 0, b: 0, a: 0}
     - _DetailNormalMapDXTScalers: {r: 0, g: 0, b: 0, a: 0}
-    - _EmissionColor: {r: 198.97638, g: 114.593735, b: 0, a: 198.97638}
+    - _EmissionColor: {r: 221.54655, g: 127.592255, b: 0, a: 221.54655}
     - _EmissionColorSpaceOrigin: {r: 0.003921569, g: 0.003921569, b: 0.003921569,
         a: 0}
     - _EmissionColorSpaceVector1: {r: 0, g: 0, b: 0, a: 0}

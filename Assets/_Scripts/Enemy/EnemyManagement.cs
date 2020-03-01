@@ -22,10 +22,12 @@ public class EnemyManagement : MonoBehaviour
 
 	public void RemoveEnemy(GameObject ene)
 	{
-		Enemys.Remove(ene);
+		if (ene)
+			Enemys.Remove(ene);
 	}
 	public void RemoveMultiEnemy(GameObject ene)
 	{
-		MultiLockEnemy.Remove(ene);
+		if (ene)
+			MultiLockEnemy.Remove(ene);
 	}
 }

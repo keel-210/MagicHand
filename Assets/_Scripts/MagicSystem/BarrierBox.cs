@@ -34,7 +34,7 @@ public class BarrierBox : MonoBehaviour
 		StartCoroutine(ShaderFloatValueChanger(material, "_YFace", -0.5f, 0.5f, FaceYTime));
 		yield return new WaitForSeconds(FaceYTime);
 		if (target)
-			target.GetComponent<IEnemy>()?.DestroyEffect();
+			target.GetComponent<IEnemy>()?.DestroyWithScore();
 		yield return new WaitForSeconds(FaceYTime * 2);
 		Addressables.ReleaseInstance(gameObject);
 	}

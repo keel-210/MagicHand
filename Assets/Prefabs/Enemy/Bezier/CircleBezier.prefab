@@ -79,7 +79,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 618790176965468678}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5, z: 0}
+  m_LocalPosition: {x: 0, y: 2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1998197373223343845}
@@ -97,11 +97,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9cf9c5931a3b3c4ba456c8213d7ebfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_position: {x: 0, y: 5, z: 0}
-  m_precedingControlPointLocalPosition: {x: 2.5, y: -0, z: -0}
-  m_precedingControlPointPosition: {x: 2.5, y: 5, z: 0}
-  m_followingControlPointLocalPosition: {x: -2.5, y: 0, z: 0}
-  m_followingControlPointPosition: {x: -2.5, y: 5, z: 0}
+  m_position: {x: 0, y: 2.5, z: 0}
+  m_precedingControlPointLocalPosition: {x: 1.25, y: -0, z: -0}
+  m_precedingControlPointPosition: {x: 1.25, y: 2.5, z: 0}
+  m_followingControlPointLocalPosition: {x: -1.25, y: 0, z: 0}
+  m_followingControlPointPosition: {x: -1.25, y: 2.5, z: 0}
   m_handleMode: 2
   extraData:
     c1: 0
@@ -349,7 +349,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2468037444115635781}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 0, z: 0}
+  m_LocalPosition: {x: 2.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1998197373223343845}
@@ -367,11 +367,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9cf9c5931a3b3c4ba456c8213d7ebfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_position: {x: 5, y: 0, z: 0}
-  m_precedingControlPointLocalPosition: {x: 0, y: -2.5, z: -0}
-  m_precedingControlPointPosition: {x: 5, y: -2.5, z: 0}
-  m_followingControlPointLocalPosition: {x: -0, y: 2.5, z: 0}
-  m_followingControlPointPosition: {x: 5, y: 2.5, z: 0}
+  m_position: {x: 2.5, y: 0, z: 0}
+  m_precedingControlPointLocalPosition: {x: 0, y: -1.25, z: -0}
+  m_precedingControlPointPosition: {x: 2.5, y: -1.25, z: 0}
+  m_followingControlPointLocalPosition: {x: -0, y: 1.25, z: 0}
+  m_followingControlPointPosition: {x: 2.5, y: 1.25, z: 0}
   m_handleMode: 2
   extraData:
     c1: 0
@@ -457,7 +457,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3562870365250293568}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: 0, z: 0}
+  m_LocalPosition: {x: -2.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1998197373223343845}
@@ -475,11 +475,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9cf9c5931a3b3c4ba456c8213d7ebfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_position: {x: -5, y: 0, z: 0}
-  m_precedingControlPointLocalPosition: {x: 0, y: 2.5, z: -0}
-  m_precedingControlPointPosition: {x: -5, y: 2.5, z: 0}
-  m_followingControlPointLocalPosition: {x: -0, y: -2.5, z: 0}
-  m_followingControlPointPosition: {x: -5, y: -2.5, z: 0}
+  m_position: {x: -2.5, y: 0, z: 0}
+  m_precedingControlPointLocalPosition: {x: 0, y: 1.25, z: -0}
+  m_precedingControlPointPosition: {x: -2.5, y: 1.25, z: 0}
+  m_followingControlPointLocalPosition: {x: -0, y: -1.25, z: 0}
+  m_followingControlPointPosition: {x: -2.5, y: -1.25, z: 0}
   m_handleMode: 2
   extraData:
     c1: 0
@@ -713,7 +713,7 @@ GameObject:
   - component: {fileID: 1998197373223343845}
   - component: {fileID: 8809705508058921284}
   m_Layer: 0
-  m_Name: NormalBezier_Circle
+  m_Name: CircleBezier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1066,7 +1066,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7625081641386580795}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -5, z: 0}
+  m_LocalPosition: {x: 0, y: -2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1998197373223343845}
@@ -1084,11 +1084,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9cf9c5931a3b3c4ba456c8213d7ebfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_position: {x: 0, y: -5, z: 0}
-  m_precedingControlPointLocalPosition: {x: -2.5, y: -0, z: -0}
-  m_precedingControlPointPosition: {x: -2.5, y: -5, z: 0}
-  m_followingControlPointLocalPosition: {x: 2.5, y: 0, z: 0}
-  m_followingControlPointPosition: {x: 2.5, y: -5, z: 0}
+  m_position: {x: 0, y: -2.5, z: 0}
+  m_precedingControlPointLocalPosition: {x: -1.25, y: -0, z: -0}
+  m_precedingControlPointPosition: {x: -1.25, y: -2.5, z: 0}
+  m_followingControlPointLocalPosition: {x: 1.25, y: 0, z: 0}
+  m_followingControlPointPosition: {x: 1.25, y: -2.5, z: 0}
   m_handleMode: 2
   extraData:
     c1: 0

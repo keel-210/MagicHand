@@ -19,11 +19,6 @@ public class LockOn : MonoBehaviour
 		StartCoroutine(Lock_Coroutine());
 		audio = GetComponent<AudioSource>();
 	}
-	void Lock()
-	{
-		MultiLock();
-		EnemyLock();
-	}
 	void MultiLock()
 	{
 		if (enemy.MultiLockEnemy.Count == 0)
@@ -33,12 +28,16 @@ public class LockOn : MonoBehaviour
 			.OrderByDescending(x => Mathf.Cos(Mathf.PI * LockOnDegreeThreshold / 90) < Vector3.Dot(transform.forward, (x.transform.position - transform.position).normalized));
 		if (enemysInSight.Count() == 0)
 			return;
-		if (LockedEnemys.Count < LockOnLimit && enemysInSight.First().GetComponent<IEnemy>().Health > 0)
+		var e = enemysInSight.First().GetComponent<IEnemy>();
+		if (LockedEnemys.Count < LockOnLimit && e.Health > 0)
 		{
 			LockedEnemys.Add(enemysInSight.First().transform);
-			enemysInSight.First().GetComponent<IEnemy>().Health--;
-			enemysInSight.First().GetComponent<IEnemy>().lockOn = this;
-			onLockOnEvent.Invoke(enemysInSight.First().transform.position);
+			e.Health--;
+			if (e.Health <= 0)
+				e.KillSelf();
+			e.lockOn = this;
+			if (enemysInSight.Count() > 0)
+				onLockOnEvent.Invoke(enemysInSight.First().transform.position);
 			audio.Play();
 		}
 		else
@@ -63,6 +62,7 @@ public class LockOn : MonoBehaviour
 			{
 				LockedEnemys.Add(LockTarget.transform);
 				LockTarget.GetComponent<IEnemy>().Health--;
+				LockTarget.GetComponent<IEnemy>().KillSelf();
 				LockTarget.GetComponent<IEnemy>().lockOn = this;
 				onLockOnEvent.Invoke(LockTarget.transform.position);
 				audio.Play();
@@ -74,12 +74,18 @@ public class LockOn : MonoBehaviour
 			}
 		}
 	}
+	public void RemoveMe(Transform t)
+	{
+		if (t)
+			LockedEnemys.Remove(t);
+	}
 	public void CleanLockedEnemy() => LockedEnemys.Clear();
 	IEnumerator Lock_Coroutine()
 	{
 		while (true)
 		{
-			Lock();
+			MultiLock();
+			EnemyLock();
 			yield return new WaitForSeconds(LockOnInterval);
 		}
 	}

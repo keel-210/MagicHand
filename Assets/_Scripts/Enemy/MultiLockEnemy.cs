@@ -1,32 +1,16 @@
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using System.Collections;
+using UnityEngine.Events;
 
-public class MultiLockEnemy : MonoBehaviour, IEnemy
+public class MultiLockEnemy : MultiEnemyBase
 {
-	[SerializeField] AssetReference DestroyEffect_ref = default;
-	[SerializeField] int _health = 1;
-	[SerializeField] AnimationCurve DestroyScaleCurve = default;
-	public int Health { get; set; }
-	public LockOn lockOn { get; set; }
-	public Score score { get; set; }
-	public void Initialize(Vector3 pos, Transform Manager)
+	void Start()
 	{
-		transform.parent = Manager;
-		transform.localPosition = pos;
-		transform.root.GetComponent<EnemyManagement>().SetMultiEnemy(gameObject);
-		Health = _health;
+		OnDestroyWithScore.AddListener(MultiEnemyDestroyWithScore);
+		OnDestroyWithoutScore.AddListener(MultiEnemyDestroyWithoutScore);
 	}
-	public void KillSelf()
-	{
-		transform.root.GetComponent<EnemyManagement>().RemoveMultiEnemy(gameObject);
-	}
-	void Update()
-	{
-		if (Health <= 0)
-			KillSelf();
-	}
-	public void DestroyEffect()
+	void MultiEnemyDestroyWithScore()
 	{
 		if (Health > 0)
 			return;
@@ -37,9 +21,14 @@ public class MultiLockEnemy : MonoBehaviour, IEnemy
 		{
 			op.Result.transform.position = pos;
 		};
+		if (lockOn && lockOn.LockedEnemys.Contains(transform))
+			lockOn.LockedEnemys.Remove(transform);
+	}
+	void MultiEnemyDestroyWithoutScore()
+	{
 		StartCoroutine(DestroyScale(0.1f));
 	}
-	IEnumerator DestroyScale(float waitTime)
+	public IEnumerator DestroyScale(float waitTime)
 	{
 		float t = Time.time;
 		while (Time.time < t + waitTime)
@@ -47,6 +36,5 @@ public class MultiLockEnemy : MonoBehaviour, IEnemy
 			transform.localScale = Vector3.one * DestroyScaleCurve.Evaluate((Time.time - t) / waitTime);
 			yield return null;
 		}
-		Addressables.ReleaseInstance(this.gameObject);
 	}
 }
