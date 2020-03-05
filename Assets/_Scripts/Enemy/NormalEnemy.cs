@@ -17,6 +17,7 @@ public class NormalEnemy : EnemyBase
 		Addressables.InstantiateAsync(DestroyEffect_ref).Completed += op =>
 		{
 			op.Result.transform.position = pos;
+			Quantize.QuantizePlay(op.Result.GetComponent<AudioSource>());
 		};
 		if (lockOn && lockOn.LockedEnemys.Contains(transform))
 			lockOn.LockedEnemys.Remove(transform);
@@ -27,6 +28,7 @@ public class NormalEnemy : EnemyBase
 	}
 	public IEnumerator DestroyScale(float waitTime)
 	{
+		Destroy(GetComponent<ChangeScale>());
 		float t = Time.time;
 		while (Time.time < t + waitTime)
 		{

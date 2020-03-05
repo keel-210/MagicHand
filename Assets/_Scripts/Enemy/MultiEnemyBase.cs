@@ -14,13 +14,16 @@ public class MultiEnemyBase : MonoBehaviour, IEnemy
 	public UnityEvent OnDestroyWithScore { get; set; } = new UnityEvent();
 	public UnityEvent OnDestroyWithoutScore { get; set; } = new UnityEvent();
 	public AreaEnemy.EnemyMovement EnemyMovement { get; set; }
+	public int CollisionHealth;
 	public void Initialize(AreaEnemy.EnemyMovement e)
 	{
 		EnemyMovement = e;
 		transform.parent = e.Manager.transform;
 		transform.localPosition = e.EnemyPos;
 		transform.root.GetComponent<EnemyManagement>().SetMultiEnemy(gameObject);
+		_health = e.health;
 		Health = e.health;
+		CollisionHealth = e.health;
 		if (GetComponent<BezierSolution.BezierWalkerWithSpeed>())
 			GetComponent<BezierSolution.BezierWalkerWithSpeed>().spline = e.Bezier.GetComponent<BezierSolution.BezierSpline>();
 		if (GetComponent<BezierSpeedChanger>())
@@ -41,6 +44,10 @@ public class MultiEnemyBase : MonoBehaviour, IEnemy
 	public void DestroyWithScore()
 	{
 		if (Health > 0)
+			return;
+		if (CollisionHealth > 0)
+			CollisionHealth--;
+		if (CollisionHealth > 0)
 			return;
 		OnDestroyWithScore.Invoke();
 		DestroyWithoutScore();

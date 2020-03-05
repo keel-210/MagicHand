@@ -8,6 +8,7 @@ public class BarrierSign : MonoBehaviour
 	[SerializeField] float ShotInterval = 0.1f;
 	[SerializeField] AssetReference BarrierBox = default;
 	LockOn lockOn;
+	bool Shot = false, IsShooting = false;
 	void Start()
 	{
 		Initialize();
@@ -23,11 +24,15 @@ public class BarrierSign : MonoBehaviour
 
 		StartCoroutine(ShotLoop());
 	}
+	void Update()
+	{
+		Shot = detector.sign == HandSign_Bend.Peace;
+	}
 	IEnumerator ShotLoop()
 	{
 		while (true)
 		{
-			if (detector.sign == HandSign_Bend.Peace && lockOn.LockedEnemys.Count > 0)
+			if (Shot && !IsShooting && lockOn.LockedEnemys.Count > 0)
 			{
 				int BulletCount = lockOn.LockedEnemys.Count;
 				Debug.Log("Barrier [x" + BulletCount.ToString() + "]");
@@ -44,6 +49,7 @@ public class BarrierSign : MonoBehaviour
 					};
 					yield return new WaitForSeconds(ShotInterval);
 				}
+				IsShooting = false;
 			}
 			yield return new WaitForSeconds(ShotInterval);
 		}

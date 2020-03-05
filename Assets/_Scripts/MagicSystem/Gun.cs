@@ -6,7 +6,7 @@ public class Gun : MonoBehaviour
 {
 	[SerializeField] HandSignDetector detector = default;
 	[SerializeField] float ShotInterval = 0.1f;
-	[SerializeField] AssetReference BulletAsset = default, GunCircle = default;
+	[SerializeField] AssetReference BulletAsset = default, GunCircle = default, BulletSound = default;
 	[SerializeField] AudioSource MaxShot;
 	public float DirDot;
 	OVRSkeleton _ovrSkelton;
@@ -14,6 +14,7 @@ public class Gun : MonoBehaviour
 	Vector3 IndexDirection;
 	GameObject Circle;
 	LockOn lockOn;
+	bool Shot = false, IsShooting = false;
 	void Start()
 	{
 		Initialize();
@@ -53,15 +54,21 @@ public class Gun : MonoBehaviour
 			Circle.transform.rotation = Quaternion.FromToRotation(Vector3.forward, (IndexTip.position - Index3.position).normalized);
 			Circle.SetActive(detector.sign == HandSign_Bend.Gun);
 		}
+		Shot = detector.sign == HandSign_Bend.Gun;
 	}
 	IEnumerator ShotLoop()
 	{
 		while (true)
 		{
-			if (detector.sign == HandSign_Bend.Gun && lockOn.LockedEnemys.Count > 0)
+			if (Shot && !IsShooting && lockOn.LockedEnemys.Count > 0)
 			{
 				int BulletCount = lockOn.LockedEnemys.Count;
 				Debug.Log("Shot [x" + BulletCount.ToString() + "]");
+				IsShooting = true;
+				Addressables.InstantiateAsync(BulletSound).Completed += op =>
+				{
+					op.Result.GetComponent<BulletSound>().Initialize(BulletCount);
+				};
 				for (int i = 0; i < BulletCount; i++)
 				{
 					IndexDirection = (IndexTip.position - Index3.position).normalized;
@@ -70,7 +77,7 @@ public class Gun : MonoBehaviour
 					{
 						if (lockOn.LockedEnemys.Count > 0)
 						{
-							op.Result.GetComponent<Bullet>()?.Initialize(IndexTip.position, IndexDirection, lockOn.LockedEnemys[0], pitch);
+							op.Result.GetComponent<Bullet>()?.Initialize(IndexTip.position, IndexDirection, lockOn.LockedEnemys[0]);
 							lockOn.LockedEnemys.RemoveAt(0);
 						}
 					};
@@ -78,6 +85,7 @@ public class Gun : MonoBehaviour
 						MaxShot.Play();
 					yield return new WaitForSeconds(ShotInterval);
 				}
+				IsShooting = false;
 			}
 			yield return new WaitForSeconds(ShotInterval);
 		}

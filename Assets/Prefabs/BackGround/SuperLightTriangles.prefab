@@ -107,7 +107,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 1
     m_RotationOrder: 4
-  AnimationLength: 0.5
+  AnimationLength: 1.8962963
   target: {fileID: 2100000, guid: 4480a919fdb06da43abd257b71d7311d, type: 2}
   emissionColor: {r: 0, g: 0, b: 0.7490196, a: 1}
 --- !u!114 &1910269018

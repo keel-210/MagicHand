@@ -7,17 +7,15 @@ public class Bullet : MonoBehaviour
 	[SerializeField] float HitTime = 0.1f;
 	Rigidbody rigidbody;
 	public Transform target;
-	float pitch;
 	public bool IsInitialized = false, IsHit = false;
-	public void Initialize(Vector3 StartPos, Vector3 IndexDirection, Transform _target, float _pitch)
+	public void Initialize(Vector3 StartPos, Vector3 IndexDirection, Transform _target)
 	{
 		transform.position = StartPos;
 		rigidbody = gameObject.GetComponent<Rigidbody>();
 		rigidbody.useGravity = false;
 		rigidbody.velocity = IndexDirection * 10f;
-		GetComponent<AudioSource>().Play();
+		Quantize.QuantizePlay(GetComponent<AudioSource>());
 		target = _target;
-		pitch = _pitch;
 		IsInitialized = true;
 		IsHit = false;
 	}
@@ -49,8 +47,6 @@ public class Bullet : MonoBehaviour
 		Addressables.InstantiateAsync(HitEffect).Completed += op =>
 		{
 			op.Result.transform.position = pos;
-			op.Result.GetComponent<AudioSource>().pitch = pitch;
-			op.Result.GetComponent<AudioSource>().Play();
 		};
 		UnityEngine.AddressableAssets.Addressables.ReleaseInstance(this.gameObject);
 	}

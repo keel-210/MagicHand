@@ -125,7 +125,6 @@ MonoBehaviour:
   DestroyEffect_ref:
     m_AssetGUID: 396e0445f843c0640938087419eaed0d
     m_SubObjectName: 
-  _health: 30
   DestroyScaleCurve:
     serializedVersion: 2
     m_Curve:
@@ -159,6 +158,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  _health: 30
 --- !u!54 &54009369182180150
 Rigidbody:
   m_ObjectHideFlags: 0

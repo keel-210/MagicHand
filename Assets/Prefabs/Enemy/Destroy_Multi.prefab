@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2851296050757444592}
   - component: {fileID: 114428000536627696}
   - component: {fileID: 82232332032712304}
+  - component: {fileID: 114201916875658164}
   m_Layer: 0
   m_Name: Destroy_Multi
   m_TagString: Untagged
@@ -4783,7 +4784,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300001, guid: 1dd706bb85d8aef4e83a6229dbd62c36,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: ad79598a81b2cf748b50f8390371dda4, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.05
   m_Pitch: 1
   Loop: 0
@@ -4868,3 +4869,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &114201916875658164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5085676224036643847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa31fde4bc2dfe46a1f1dca58fe83ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

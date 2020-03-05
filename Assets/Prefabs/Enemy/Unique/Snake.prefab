@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2702271572504159983}
   - component: {fileID: 3332853986385227379}
   - component: {fileID: 5151642845429008261}
+  - component: {fileID: 1759910791756064598}
   m_Layer: 0
   m_Name: NormalEnemy (3)
   m_TagString: Enemy
@@ -171,6 +172,19 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1759910791756064598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300813036580346186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 200f9e1f7d72b094a844ba0a0f1f3f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Time: 0.2
 --- !u!1 &1650915502397438761
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,6 +200,7 @@ GameObject:
   - component: {fileID: 8523822616491795498}
   - component: {fileID: 873671384391797923}
   - component: {fileID: 2067091515461152236}
+  - component: {fileID: 570470400477999151}
   m_Layer: 0
   m_Name: NormalEnemy (6)
   m_TagString: Enemy
@@ -342,6 +357,19 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &570470400477999151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650915502397438761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 200f9e1f7d72b094a844ba0a0f1f3f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Time: 0.2
 --- !u!1 &1750655686663926909
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,7 +652,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _health: 10
+  _health: 5
 --- !u!1 &2300943139464178491
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,6 +668,7 @@ GameObject:
   - component: {fileID: 8471627815437606540}
   - component: {fileID: 4637056680156519042}
   - component: {fileID: 5902985764763499856}
+  - component: {fileID: 5264061270538840117}
   m_Layer: 0
   m_Name: NormalEnemy (5)
   m_TagString: Enemy
@@ -796,6 +825,19 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5264061270538840117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2300943139464178491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 200f9e1f7d72b094a844ba0a0f1f3f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Time: 0.2
 --- !u!1 &4573254938423246754
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,6 +853,7 @@ GameObject:
   - component: {fileID: 5322194150052039333}
   - component: {fileID: 5142009397740661409}
   - component: {fileID: 6542059816475309476}
+  - component: {fileID: 1885012184438034476}
   m_Layer: 0
   m_Name: NormalEnemy (4)
   m_TagString: Enemy
@@ -967,6 +1010,19 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1885012184438034476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4573254938423246754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 200f9e1f7d72b094a844ba0a0f1f3f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Time: 0.2
 --- !u!1 &5867686170254138623
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,6 +1038,7 @@ GameObject:
   - component: {fileID: 5691251426190779296}
   - component: {fileID: 4381278458059771208}
   - component: {fileID: 6665805905484067430}
+  - component: {fileID: 1895438041908188919}
   m_Layer: 0
   m_Name: NormalEnemy
   m_TagString: Enemy
@@ -1138,6 +1195,19 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1895438041908188919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5867686170254138623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 200f9e1f7d72b094a844ba0a0f1f3f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Time: 0.2
 --- !u!1 &5946073817043115505
 GameObject:
   m_ObjectHideFlags: 0
@@ -1153,6 +1223,7 @@ GameObject:
   - component: {fileID: 2986641515191576442}
   - component: {fileID: 63991631321262365}
   - component: {fileID: 314569332906028546}
+  - component: {fileID: 2587924962093655554}
   m_Layer: 0
   m_Name: NormalEnemy (7)
   m_TagString: Enemy
@@ -1309,6 +1380,19 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2587924962093655554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5946073817043115505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 200f9e1f7d72b094a844ba0a0f1f3f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Time: 0.2
 --- !u!1 &7034401432311044776
 GameObject:
   m_ObjectHideFlags: 0
@@ -1324,6 +1408,7 @@ GameObject:
   - component: {fileID: 6991619291393564925}
   - component: {fileID: 6913908337229807563}
   - component: {fileID: 3196610894151296068}
+  - component: {fileID: 1300490758127484268}
   m_Layer: 0
   m_Name: NormalEnemy (2)
   m_TagString: Enemy
@@ -1480,6 +1565,19 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1300490758127484268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7034401432311044776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 200f9e1f7d72b094a844ba0a0f1f3f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Time: 0.2
 --- !u!1 &8254972368231983421
 GameObject:
   m_ObjectHideFlags: 0
@@ -1495,6 +1593,7 @@ GameObject:
   - component: {fileID: 3856868452685876440}
   - component: {fileID: 8523048710382688249}
   - component: {fileID: 9014159990077077669}
+  - component: {fileID: 3485212662166632545}
   m_Layer: 0
   m_Name: NormalEnemy (1)
   m_TagString: Enemy
@@ -1651,3 +1750,16 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3485212662166632545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8254972368231983421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 200f9e1f7d72b094a844ba0a0f1f3f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Time: 0.2

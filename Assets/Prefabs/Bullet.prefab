@@ -97,7 +97,7 @@ MonoBehaviour:
   HitEffect:
     m_AssetGUID: 2291da57e926d6a4daa4132270173b3d
     m_SubObjectName: 
-  HitTime: 0.1
+  HitTime: 0.15
   target: {fileID: 0}
   IsInitialized: 0
   IsHit: 0

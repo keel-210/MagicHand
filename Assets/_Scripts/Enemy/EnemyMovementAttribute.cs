@@ -32,7 +32,11 @@ public class AreaEnemyDrawer : Editor
 		};
 		RL.onChangedCallback = (list) =>
 		{
-			isExpandeds = new List<bool>(list.count);
+			if (list.count == 0)
+				return;
+			isExpandeds = new List<bool>();
+			for (int i = 0; i < list.count; i++)
+				isExpandeds.Add(false);
 			for (int i = 0; i < list.count; i++)
 				isExpandeds[i] = list.serializedProperty.GetArrayElementAtIndex(i).isExpanded;
 		};
@@ -64,7 +68,6 @@ public class AreaEnemyDrawer : Editor
 		if (GUILayout.Button("Fold All Enemy Movements"))
 			for (int i = 0; i < RL.count; i++)
 				RL.serializedProperty.GetArrayElementAtIndex(i).isExpanded = false;
-
 		RL.DoLayoutList();
 		if (EditorGUI.EndChangeCheck())
 			serializedObject.ApplyModifiedProperties();
@@ -89,7 +92,7 @@ public class EnemyMovementAttribute : PropertyDrawer
 			var ele1 = property.FindPropertyRelative("EnemyReference");
 			var ele1Rect = new Rect(position)
 			{
-				height = position.height,
+				height = EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing,
 				width = position.width - 70,
 				x = 100,
 				y = position.y

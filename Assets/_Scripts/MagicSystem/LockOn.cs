@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class LockOn : MonoBehaviour
 {
-	[SerializeField] int LockOnLimit = default;
+	[SerializeField] public int LockOnLimit = default;
 	[SerializeField] EnemyManagement enemy = default;
 	[SerializeField] float LockOnDegreeThreshold = default, LockOnInterval = default;
 	public List<Transform> LockedEnemys = new List<Transform>();
@@ -38,7 +38,7 @@ public class LockOn : MonoBehaviour
 			e.lockOn = this;
 			if (enemysInSight.Count() > 0)
 				onLockOnEvent.Invoke(enemysInSight.First().transform.position);
-			audio.Play();
+			Quantize.QuantizePlay(audio);
 		}
 		else
 		{
@@ -65,7 +65,7 @@ public class LockOn : MonoBehaviour
 				LockTarget.GetComponent<IEnemy>().KillSelf();
 				LockTarget.GetComponent<IEnemy>().lockOn = this;
 				onLockOnEvent.Invoke(LockTarget.transform.position);
-				audio.Play();
+				Quantize.QuantizePlay(audio);
 				break;
 			}
 			else
@@ -86,7 +86,7 @@ public class LockOn : MonoBehaviour
 		{
 			MultiLock();
 			EnemyLock();
-			yield return new WaitForSeconds(LockOnInterval);
+			yield return new WaitUntil(Quantize.IsJustChangedBeatHalfFunc);
 		}
 	}
 }

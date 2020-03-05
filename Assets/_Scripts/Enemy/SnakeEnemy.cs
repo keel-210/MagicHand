@@ -19,6 +19,8 @@ public class SnakeEnemy : MultiEnemyBase
 		if (Health > 0)
 			return;
 		KillSelf();
+		foreach (Transform t in transform)
+			t.parent = EnemyMovement.Manager.transform;
 		score.score += 500 * _health;
 		Vector3 pos = transform.position;
 		Addressables.InstantiateAsync(DestroyEffect_ref).Completed += op =>
@@ -50,5 +52,6 @@ public class SnakeEnemy : MultiEnemyBase
 			transform.localScale = Vector3.one * DestroyScaleCurve.Evaluate((Time.time - t) / waitTime);
 			yield return null;
 		}
+		transform.localScale = Vector3.one * 0.01f;
 	}
 }

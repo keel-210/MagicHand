@@ -23,12 +23,13 @@ public class SnakeSlave : EnemyBase
 	void EnemyDestroyWithoutScore()
 	{
 		var bezier = transform.parent.GetComponent<BezierSolution.BezierWalkerLocomotion>();
-		bezier.Tail.Remove(transform);
-		bezier.TailDistances.RemoveAt(0);
+		bezier?.Tail.Remove(transform);
+		bezier?.TailDistances.RemoveAt(0);
 		StartCoroutine(DestroyScale(0.1f));
 	}
 	IEnumerator DestroyScale(float waitTime)
 	{
+		Destroy(GetComponent<ChangeScale>());
 		float t = Time.time;
 		while (Time.time < t + waitTime)
 		{
